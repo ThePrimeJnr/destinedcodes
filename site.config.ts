@@ -21,17 +21,18 @@ const siteData: any = {
     ],
   },
 
-  home: {
-    title: 'Welcome to DestinedCodes Portfolio',
+  footer: {
     socials: {
       email: 'destinysaturday@example.com',
       github: 'https://github.com/destinedcodes',
       twitter: 'https://twitter.com/destinedcodes',
       linkedin: 'https://www.linkedin.com/in/destinedcodes',
-      facebook: '',
-      instagram: '',
-      youtube: '',
+      youtube: 'https://youtube.com/destinedcodes',
     },
+  },
+
+  home: {
+    title: 'Welcome to DestinedCodes Portfolio',
   },
 
   blog: {

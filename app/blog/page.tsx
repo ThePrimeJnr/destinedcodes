@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import BlogContent from '@/components/blog-content';
 
-import { getPostsData } from '@/app/server-utils';
+import { getPostsData } from '@/lib/utils/server-utils';
 
 import { getMetadata } from '@/site.config';
 

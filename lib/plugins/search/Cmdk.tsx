@@ -33,7 +33,7 @@ const Cmdk = ({ open, setOpen }: any) => {
         <CommandGroup heading="Blog">
           <div className={'space-y-4'}>
             {posts.map((post: any) => (
-              <Link href={`/blog/${post?.id}`}>
+              <Link href={`/blog/${post?.id}`} key={`/blog/${post?.id}`}>
                 <CommandItem
                   className={'flex flex-col justify-center items-start'}
                 >

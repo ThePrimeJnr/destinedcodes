@@ -1,8 +1,8 @@
 {
-  "name": "destinedcodes-portfolio",
+  "name": "destinedcodes",
   "version": "0.0.1",
   "private": true,
-  "description": "DestinedCodes' personal portfolio and blog built with Next.js.",
+  "description": "DestinedCodes' personal website built with Next.js, Tailwind CSS, MDX and deployed on Vercel",
   "keywords": [
     "destinedcodes",
     "Destiny Saturday",
@@ -18,10 +18,9 @@
     "markdown",
     "web-development"
   ],
-  "repository": "https://github.com/destinedcodes/destinedcodes-portfolio",
+  "repository": "git@github.com:destinedcodes/destinedcodes.git",
   "license": "MIT",
   "author": "Destiny Saturday",
-  "main": "index.js",
   "scripts": {
     "build": "next build",
     "dev": "next dev",

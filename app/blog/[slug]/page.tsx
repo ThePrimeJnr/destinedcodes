@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 import DrawBack from '@/components/draw-back';
 import Time from '@/components/time';
 
-import { getPostsData } from '@/app/server-utils';
+import { getPostsData } from '@/lib/utils/server-utils';
 
 const getPost = (slug: string) =>
   getPostsData().find((post: any) => post.id === slug);

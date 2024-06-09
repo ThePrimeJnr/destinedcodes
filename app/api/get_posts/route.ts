@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { getPostsData } from '@/app/server-utils';
+import { getPostsData } from '@/lib/utils/server-utils';
 
 export function GET(req: any, res: any) {
   const posts = getPostsData();

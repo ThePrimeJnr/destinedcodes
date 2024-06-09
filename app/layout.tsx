@@ -1,17 +1,15 @@
-import ProviderTheme from '@/provider/provider-theme';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 
-import Footer from '@/components/footer';
-import Header from '@/components/header';
-import Title from '@/components/title';
-import { Separator } from '@/components/ui/separator';
+import jetBrainsMono from '@/lib/fonts/fonts';
+import ProviderTheme from '@/lib/provider/provider-theme';
+
+import Body from '@/components/layouts/body';
+import Footer from '@/components/layouts/footer';
+import Header from '@/components/layouts/header';
 
 import { getMetadata } from '@/site.config';
 
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = getMetadata('default');
 
@@ -25,20 +23,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
       </head>
-      <body className={'min-h-screen font-mono'}>
+      <body
+        className={`${jetBrainsMono.className} antialiased min-h-screen font-mono`}
+      >
         <ProviderTheme>
           <Header />
-          <Separator />
-          <main className={'container md:my-12 my-8'}>
-            <div
-              className={
-                'prose md:prose-lg min-w-full w-full dark:prose-invert'
-              }
-            >
-              <Title />
-              {children}
-            </div>
-          </main>
+          <Body>{children}</Body>
           <Footer />
         </ProviderTheme>
       </body>
