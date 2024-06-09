@@ -3,10 +3,10 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
+import { getPostsData } from '@/lib/utils/server-utils';
+
 import DrawBack from '@/components/draw-back';
 import Time from '@/components/time';
-
-import { getPostsData } from '@/lib/utils/server-utils';
 
 const getPost = (slug: string) =>
   getPostsData().find((post: any) => post.id === slug);

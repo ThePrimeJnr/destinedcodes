@@ -10,16 +10,18 @@ import siteData from '@/site.config';
 
 const Comments = () => {
   const { comment } = siteData;
-  if (!comment?.enabled) return null;
-  const engine = comment?.engine;
   const [show, setShow] = useState(false);
+
+  if (!comment?.enabled) return null;
+
+  const engine = comment?.engine;
 
   return (
     <>
       {!show && (
         <Button
-          className={'w-full'}
-          variant={'outline'}
+          className="w-full"
+          variant="outline"
           onClick={() => setShow(true)}
         >
           Show Comments

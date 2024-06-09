@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
-import BlogContent from '@/components/blog-content';
-
 import { getPostsData } from '@/lib/utils/server-utils';
+
+import BlogContent from '@/components/blog-content';
 
 import { getMetadata } from '@/site.config';
 

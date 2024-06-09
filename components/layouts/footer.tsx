@@ -12,8 +12,8 @@ import { Separator } from '../ui/separator';
 const Footer = () => {
   return (
     <>
-      <Separator/>
-      <footer className="container flex flex-col md:flex-row justify-between items-center py-4" >
+      <Separator />
+      <footer className="container flex flex-col md:flex-row justify-between items-center py-4">
         <Logo title={'DestinedCodes'} />
         <div className="text-center md:text-left mt-4 md:mt-0">
           © 2024 DestinedCodes. All rights reserved

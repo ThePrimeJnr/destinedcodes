@@ -2,32 +2,41 @@ import { useTheme } from 'next-themes';
 import { useEffect, useRef } from 'react';
 
 const Utterances = ({ config }: any) => {
-  const ref: any = useRef(null);
-
+  const ref = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
 
   useEffect(() => {
     if (!ref.current) return;
 
-    ref?.current.childNodes.forEach((node: any) => node.remove());
+    const { current: currentRef } = ref;
 
+    // Clean up any existing comments
+    while (currentRef.firstChild) {
+      currentRef.removeChild(currentRef.firstChild);
+    }
+
+    // Create new script element for Utterances
     const script = document.createElement('script');
-    Object.keys(config).forEach((item: any) => {
-      script.setAttribute(item, config[item]);
+    Object.keys(config).forEach((key) => {
+      script.setAttribute(key, config[key]);
     });
+
+    // Set theme attribute based on Next.js theme
     if (theme === 'dark') {
       script.setAttribute('theme', 'github-dark');
     }
 
-    ref?.current.appendChild(script);
+    // Append script to Utterances div
+    currentRef.appendChild(script);
 
+    // Clean up function
     return () => {
-      if (ref.current) {
-        // remove the script from the DOM
-        ref?.current.childNodes.forEach((node: any) => node.remove());
+      // Remove script when component unmounts
+      while (currentRef.firstChild) {
+        currentRef.removeChild(currentRef.firstChild);
       }
     };
-  }, [theme]);
+  }, [config, theme]); // Include config and theme in dependency array
 
   return <div ref={ref} />;
 };
