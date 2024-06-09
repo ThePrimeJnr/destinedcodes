@@ -4,11 +4,10 @@ import path from 'path';
 import readingTime from 'reading-time';
 
 export const getPostsData = () => {
-  const postsDirectory = path.join(process.cwd(), 'posts');
+  const postsDirectory = path.join(process.cwd(), 'data/posts');
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames
     .map((fileName: any) => {
-      // 这里匹配 md 或者 mdx
       const id = fileName.replace(/\.mdx?$/, '');
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
