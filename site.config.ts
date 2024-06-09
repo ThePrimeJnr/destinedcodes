@@ -1,40 +1,28 @@
-import Intro from "./components/intro.mdx"
+import Intro from "./components/intro.mdx";
 
 const siteData: any = {
-    author: "Destiny Saturday",  // author name
-    title: "DestinedCodes Portfolio", // website title
-    description: "Destiny Saturday's personal portfolio and blog, created with Next.js, Shadcn-ui, and Tailwind.css.", // website description
+    author: "Destiny Saturday",
+    title: "DestinedCodes Portfolio",
+    description:
+        "Destiny Saturday's personal portfolio and blog, created with Next.js, Shadcn-ui, and Tailwind.css.",
+    language: "en",
+    url: "https://www.destinedcodes.com",
     theme: "light",
-    language: "en", // zh-CN | en
-    githubRepo: "https://github.com/destinedcodes/destinedcodes-portfolio",
 
-    // how to change the favicon of the website?
-    // change the app/favicon.ico file directly，or refer to the document below
-    // https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons
-
-    //header config
     header: {
         logo: "/logo.png",
         title: "DestinedCodes",
-
-        // navigation bar
         routes: [
-            {
-                name: 'Blog',
-                value: '/blog'
-            },
-            {
-                name: 'Projects',
-                value: '/project'
-            }
-        ]
+            { name: "Home", value: "/" },
+            { name: "Blog", value: "/blog" },
+            { name: "Projects", value: "/project" },
+            { name: "Videos", value: "/video" },
+            { name: "Contact", value: "/contact" },
+        ],
     },
 
     home: {
         title: "Welcome to DestinedCodes Portfolio",
-
-        // introduction or about me
-        intro: Intro, // file path of the introduction
         socials: {
             email: "destinysaturday@example.com",
             github: "https://github.com/destinedcodes",
@@ -47,58 +35,32 @@ const siteData: any = {
     },
 
     blog: {
-        title: 'My Blog',
-        description: 'All of my thoughts, experiences, and projects, collected in chronological order.',
+        title: "My Blog",
+        description:
+            "All of my thoughts, experiences, and projects, collected in chronological order.",
     },
 
     project: {
         title: "Look What I've Done",
         description: "Some personal projects I've worked on.",
-
-        // status color and text
         getStatus: (status: string) => {
-            // you can customize the status color and text！
-
-            // dev: Under development or planning.
-            // active: Currently focused on this project.
-            // filed: Not upgrading will only fix bugs.
-            // offline: Going offline soon.
-            // none: Keep running.
-            if(!status) return {}
-
+            if (!status) return {};
             switch (status) {
                 case "active":
-                    return {
-                        variant: "default",
-                        text: "ACTIVE",
-                    }
+                    return { variant: "default", text: "ACTIVE" };
                 case "dev":
-                    return {
-                        variant: "secondary",
-                        text: "DEV",
-                    }
+                    return { variant: "secondary", text: "DEV" };
                 case "filed":
-                    return {
-                        variant: "outline",
-                        text: "FILED",
-                    }
+                    return { variant: "outline", text: "FILED" };
                 case "offline":
-                    return {
-                        variant: "destructive",
-                        text: "OFFLINE",
-                    }
+                    return { variant: "destructive", text: "OFFLINE" };
             }
         },
-
-        // name, description, href are required
-        // github: username/repo
-        // status: getStatus return value
-        // and so on
-        // you can add more fields according to your needs ,but you need to modify the code in the project/page.tsx file
         projects: [
             {
                 name: "NextBlog",
-                description: "A minimalist blog created with Next.js, Shadcn-ui, and Tailwind.css.",
+                description:
+                    "A minimalist blog created with Next.js, Shadcn-ui, and Tailwind.css.",
                 href: "https://next-blog.destinedcodes.com",
                 github: "destinedcodes/next-blog",
                 status: "active",
@@ -116,14 +78,16 @@ const siteData: any = {
             },
             {
                 name: "RMX",
-                description: "An online editor to quickly create project README.md files and GitHub profile templates.",
+                description:
+                    "An online editor to quickly create project README.md files and GitHub profile templates.",
                 href: "https://readme.destinedcodes.com",
                 github: "destinedcodes/readme",
                 status: "filed",
             },
             {
                 name: "Resume Generator",
-                description: "A minimalist online resume generator with potential for major upgrades.",
+                description:
+                    "A minimalist online resume generator with potential for major upgrades.",
                 href: "https://resume.destinedcodes.com",
                 github: "destinedcodes/resume",
                 status: "offline",
@@ -133,8 +97,7 @@ const siteData: any = {
 
     comment: {
         enabled: true,
-        engine: "giscus", // giscus | utterances
-        // giscus doc: https://giscus.app
+        engine: "giscus",
         giscus: {
             repo: "destinedcodes/destinedcodes-portfolio",
             repoId: "R_kgDOKTZ_kQ",
@@ -148,8 +111,6 @@ const siteData: any = {
             lang: "en",
             loading: "lazy",
         },
-
-        // utterances doc: https://utteranc.es
         utterances: {
             src: "https://utteranc.es/client.js",
             repo: "destinedcodes/destinedcodes-portfolio",
@@ -157,19 +118,57 @@ const siteData: any = {
             theme: "github-light",
             crossorigin: "anonymous",
             label: "",
-            async: true
-        }
+            async: true,
+        },
     },
 
     search: {
         enabled: true,
-        engine: "cmdk", //  cmdk | algolia
-        // todo algolia search
-        // algolia: {
-        //     appId: "",
-        //     apiKey: "",
-        // }
-    }
-}
+        engine: "cmdk",
+    },
+};
 
-export default siteData
+export default siteData;
+
+export function getMetadata(page: string) {
+    const pagesMetadata: { [key: string]: any } = {
+        home: {
+            title: `${siteData.title} - Home`,
+            description: siteData.description,
+        },
+        blog: {
+            title: `${siteData.title} - Blog`,
+            description:
+                "All of my thoughts, experiences, and projects, collected in chronological order.",
+        },
+        projects: {
+            title: `${siteData.title} - Projects`,
+            description: "Some personal projects I've worked on.",
+        },
+        video: {
+            title: `${siteData.title} - Videos`,
+            description:
+                "Watch videos of my talks, tutorials, and project showcases.",
+        },
+        contact: {
+            title: `${siteData.title} - Contact`,
+            description: "Get in touch with me via email or social media.",
+        },
+        about: {
+            title: `${siteData.title} - About Me`,
+            description:
+                "Learn more about Destiny Saturday, also known as DestinedCodes.",
+        },
+    };
+
+    const defaultMetadata = {
+        title: siteData.title,
+        description: siteData.description,
+        author: siteData.author,
+        url: siteData.url,
+        theme: siteData.theme,
+        language: siteData.language,
+    };
+
+    return pagesMetadata[page] || defaultMetadata;
+}

@@ -3,16 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Separator } from "@/components/ui/separator";
 import Header from "@/components/header";
-import siteData from "@/site.config";
+import { getMetadata } from "@/site.config";
 import ProviderTheme from "@/provider/provider-theme";
 import Title from "@/components/title";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-    title: siteData.title,
-    description: siteData.description,
-};
+export const metadata: Metadata = getMetadata("default");
 
 export default function RootLayout({
     children,
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <head></head>
+            <head><link rel="icon" href="/images/favicon.ico" sizes="any" /></head>
             <body className={"min-h-screen font-mono"}>
                 <ProviderTheme>
                     <Header />
@@ -36,6 +34,7 @@ export default function RootLayout({
                             {children}
                         </div>
                     </main>
+                    <Footer />
                 </ProviderTheme>
             </body>
         </html>
