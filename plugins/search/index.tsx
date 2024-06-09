@@ -1,6 +1,6 @@
 'use client';
 
-import siteData from "@/blog.config";
+import siteData from "@/site.config";
 import {useEffect, useState} from "react";
 import {Button} from "@/components/ui/button";
 import Cmdk from "@/plugins/search/Cmdk";

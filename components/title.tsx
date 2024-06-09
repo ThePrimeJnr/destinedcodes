@@ -2,7 +2,7 @@
 
 import {Separator} from "@/components/ui/separator";
 import {usePathname} from "next/navigation";
-import siteData from "@/blog.config";
+import siteData from "@/site.config";
 
 
 const Title = () => {

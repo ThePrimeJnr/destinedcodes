@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import {Facebook, Github, Instagram, Linkedin, Mail, Twitter, Youtube} from "lucide-react";
-import siteData from "@/blog.config";
+import siteData from "@/site.config";
 
 const icons: any = {
     email: <Mail/>,

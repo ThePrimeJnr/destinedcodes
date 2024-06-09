@@ -1,12 +1,19 @@
-'use client'
+"use client";
 
-import {ThemeProvider} from 'next-themes'
-import siteData from "@/blog.config";
+import { ThemeProvider } from "next-themes";
 
-export default function ProviderTheme({children}: { children: React.ReactNode }) {
-
+export default function ProviderTheme({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
     return (
-        <ThemeProvider  attribute="class" defaultTheme={siteData.theme}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
             {children}
         </ThemeProvider>
     );

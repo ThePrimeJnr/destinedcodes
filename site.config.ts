@@ -1,13 +1,12 @@
-// Purpose: This file is used to configure the blog, including the author, title, description, and other settings.
 import Intro from "./components/intro.mdx"
 
 const siteData: any = {
-    author: "yuanli",  // author name
-    title: "NextBlog", // website title
-    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css", // website description
-    theme: "light", // light | dark
-    language: "zh-CN", // zh-CN | en
-    githubRepo: "https://github.com/imyuanli/next-blog", // your blog's github repo
+    author: "Destiny Saturday",  // author name
+    title: "DestinedCodes Portfolio", // website title
+    description: "Destiny Saturday's personal portfolio and blog, created with Next.js, Shadcn-ui, and Tailwind.css.", // website description
+    theme: "light",
+    language: "en", // zh-CN | en
+    githubRepo: "https://github.com/destinedcodes/destinedcodes-portfolio",
 
     // how to change the favicon of the website?
     // change the app/favicon.ico file directly，or refer to the document below
@@ -15,8 +14,8 @@ const siteData: any = {
 
     //header config
     header: {
-        logo: "/logo.png",  //  /public/logo.png
-        title: "NextBlog", // header title
+        logo: "/logo.png",
+        title: "DestinedCodes",
 
         // navigation bar
         routes: [
@@ -32,15 +31,15 @@ const siteData: any = {
     },
 
     home: {
-        title: "Welcome to NextBlog",
+        title: "Welcome to DestinedCodes Portfolio",
 
         // introduction or about me
         intro: Intro, // file path of the introduction
         socials: {
-            email: "286547316@qq.com",
-            github: "https://github.com/imyuanli",
-            twitter: "https://twitter.com",
-            linkedin: "",
+            email: "destinysaturday@example.com",
+            github: "https://github.com/destinedcodes",
+            twitter: "https://twitter.com/destinedcodes",
+            linkedin: "https://www.linkedin.com/in/destinedcodes",
             facebook: "",
             instagram: "",
             youtube: "",
@@ -49,12 +48,12 @@ const siteData: any = {
 
     blog: {
         title: 'My Blog',
-        description: 'All of my long-fesign, and more, collected in chronological order.',
+        description: 'All of my thoughts, experiences, and projects, collected in chronological order.',
     },
 
     project: {
-        title: "Look what I've done",
-        description: "Some small tools made by oneself",
+        title: "Look What I've Done",
+        description: "Some personal projects I've worked on.",
 
         // status color and text
         getStatus: (status: string) => {
@@ -99,34 +98,34 @@ const siteData: any = {
         projects: [
             {
                 name: "NextBlog",
-                description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css",
-                href: "https://next-blog.imyuanli.cn",
-                github: "imyuanli/next-blog",
+                description: "A minimalist blog created with Next.js, Shadcn-ui, and Tailwind.css.",
+                href: "https://next-blog.destinedcodes.com",
+                github: "destinedcodes/next-blog",
                 status: "active",
             },
             {
                 name: "AllDone",
-                description: "One stop project management platform",
+                description: "One-stop project management platform.",
                 status: "dev",
             },
             {
                 name: "Slash Editor",
-                description: "A simple rich text editor",
-                href: "https://slash.imyuanli.cn",
-                github: "imyuanli/slash-editor",
+                description: "A simple rich text editor.",
+                href: "https://slash.destinedcodes.com",
+                github: "destinedcodes/slash-editor",
             },
             {
                 name: "RMX",
-                description: "Readme 是一个在线编辑器，可以帮助开发人员为他们快速的制作项目的README.md，同时也满足Github个人主页的一些模板",
-                href: "https://readme.imyuanli.cn/",
-                github: "imyuanli/readme",
+                description: "An online editor to quickly create project README.md files and GitHub profile templates.",
+                href: "https://readme.destinedcodes.com",
+                github: "destinedcodes/readme",
                 status: "filed",
             },
             {
-                name: "简历生成",
-                description: "一款极简的在线简历生成器，存在诸多bug，可能会进行大升级！",
-                href: "https://resume.imyuanli.cn/",
-                github: "imyuanli/resume",
+                name: "Resume Generator",
+                description: "A minimalist online resume generator with potential for major upgrades.",
+                href: "https://resume.destinedcodes.com",
+                github: "destinedcodes/resume",
                 status: "offline",
             },
         ],
@@ -137,7 +136,7 @@ const siteData: any = {
         engine: "giscus", // giscus | utterances
         // giscus doc: https://giscus.app
         giscus: {
-            repo: "imyuanli/next-blog",
+            repo: "destinedcodes/destinedcodes-portfolio",
             repoId: "R_kgDOKTZ_kQ",
             category: "Announcements",
             categoryId: "DIC_kwDOKTZ_kc4CfMXK",
@@ -153,7 +152,7 @@ const siteData: any = {
         // utterances doc: https://utteranc.es
         utterances: {
             src: "https://utteranc.es/client.js",
-            repo: "imyuanli/next-blog",
+            repo: "destinedcodes/destinedcodes-portfolio",
             "issue-term": "pathname",
             theme: "github-light",
             crossorigin: "anonymous",

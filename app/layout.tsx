@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Separator } from "@/components/ui/separator";
 import Header from "@/components/header";
-import siteData from "@/blog.config";
+import siteData from "@/site.config";
 import ProviderTheme from "@/provider/provider-theme";
 import Title from "@/components/title";
 
@@ -20,7 +20,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <head></head>
             <body className={"min-h-screen font-mono"}>
                 <ProviderTheme>

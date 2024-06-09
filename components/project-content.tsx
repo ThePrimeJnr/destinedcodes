@@ -5,7 +5,7 @@ import {CardDescription, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {Github} from "lucide-react";
-import siteData from "@/blog.config";
+import siteData from "@/site.config";
 
 
 const ProjectContent = () => {
