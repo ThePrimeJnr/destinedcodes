@@ -1,17 +1,14 @@
-import Intro from "@/components/intro.mdx";
-import SocialList from "@/components/social-list";
+import type { Metadata } from 'next';
 
-import type { Metadata } from "next";
-import { getMetadata } from "@/site.config";
+import Intro from '@/components/intro.mdx';
+import SocialList from '@/components/social-list';
 
-export const metadata: Metadata = getMetadata("home");
+import { getMetadata } from '@/site.config';
+
+export const metadata: Metadata = getMetadata('home');
 
 const Home = () => {
-    return (
-        <>
-            {/* <Intro /> */}
-        </>
-    );
+  return <>{/* <Intro /> */}</>;
 };
 
 export default Home;
