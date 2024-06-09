@@ -1,4 +1,4 @@
-import Comments from '@/plugins/comments';
+import Comments from '@/lib/plugins/comments';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
