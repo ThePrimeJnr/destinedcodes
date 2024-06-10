@@ -1,8 +1,8 @@
-import Comments from '@/lib/plugins/comments';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
+import Comments from '@/lib/plugins/comments';
 import { getPostsData } from '@/lib/utils/server-utils';
 
 import DrawBack from '@/components/draw-back';

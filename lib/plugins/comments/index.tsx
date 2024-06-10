@@ -1,8 +1,9 @@
 'use client';
 
+import { useState } from 'react';
+
 import Giscus from '@/lib/plugins/comments/giscus';
 import Utterances from '@/lib/plugins/comments/utterances';
-import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 

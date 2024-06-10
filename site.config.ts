@@ -1,4 +1,4 @@
-import { BookOpen, Code, Home, Video, CalendarCheck } from 'lucide-react';
+import { BookOpen, CalendarCheck, Code, Home, Video } from 'lucide-react';
 
 const siteData: any = {
   author: 'Destiny Saturday',

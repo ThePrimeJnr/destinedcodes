@@ -54,7 +54,7 @@ const Header = () => {
               variant={active == route.name ? 'secondary' : 'ghost'}
               className="w-full text-base"
             >
-              <route.logo className="mr-2 w-5 h-5"/>
+              <route.logo className="mr-2 w-5 h-5" />
               {route.name}
             </Button>
           </Link>
@@ -79,10 +79,7 @@ const Header = () => {
                 <Menu size={32} />
               </Button>
             </SheetTrigger>
-            <SheetContent
-              side={'top'}
-              className="space-y-2 px-12"
-            >
+            <SheetContent side={'top'} className="space-y-2 px-12">
               <RouteLinks />
             </SheetContent>
           </Sheet>

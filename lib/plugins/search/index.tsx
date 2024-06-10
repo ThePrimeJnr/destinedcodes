@@ -1,8 +1,9 @@
 'use client';
 
-import Cmdk from '@/lib/plugins/search/Cmdk';
 import { Command, Search as SearchIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
+
+import Cmdk from '@/lib/plugins/search/Cmdk';
 
 import { Button } from '@/components/ui/button';
 
