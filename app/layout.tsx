@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Open_Sans as Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 import ProviderTheme from '@/lib/provider/provider-theme';
 
