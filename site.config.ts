@@ -1,4 +1,4 @@
-import { BookOpen, Code, Home } from 'lucide-react';
+import { BookOpen, Code, Home, Video, CalendarCheck } from 'lucide-react';
 
 const siteData: any = {
   author: 'Destiny Saturday',
@@ -16,8 +16,8 @@ const siteData: any = {
       { name: 'Home', value: '/', logo: Home },
       { name: 'Blog', value: '/blog', logo: BookOpen },
       { name: 'Projects', value: '/projects', logo: Code },
-      { name: 'Videos', value: '/videos', logo: Home },
-      { name: 'Contact', value: '/contact', logo: Home },
+      { name: 'Videos', value: '/videos', logo: Video },
+      { name: 'Contact', value: '/contact', logo: CalendarCheck },
     ],
   },
 

@@ -13,7 +13,7 @@ const Home = () => {
           Destiny Saturday
         </h1>
         <p className="mt-4 font-bold text-4xl text-secondary md:text-5xl leading-tight tracking-tight">
-          Full Stack Software &amp; DevOps Engineer
+          Software &amp; DevOps Engineer
         </p>
 
         <p className="mt-10 md:mt-14 max-w-2xl text-lg text-primary md:text-2xl tracking-tight">

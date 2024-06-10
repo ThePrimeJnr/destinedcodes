@@ -66,7 +66,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center py-4 container">
+      <header className="flex justify-between items-center md:py-4 py-2 container">
         <div className="flex justify-between items-center md:hidden w-full">
           <Sheet
             open={open}
@@ -81,7 +81,7 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent
               side={'top'}
-              className="space-y-4 p-12 w-full text-sm"
+              className="space-y-2 px-12"
             >
               <RouteLinks />
             </SheetContent>
