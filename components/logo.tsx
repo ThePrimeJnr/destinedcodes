@@ -12,7 +12,7 @@ const Logo = ({ title }: any) => {
 
   return (
     <Link className="flex justify-center items-center mr-4" href="/">
-      <div className="border-2 p-0.5 rounded-full">
+      <div className="border-primary border-2 p-0.5 rounded-full">
         <Image src={logo} height={32} width={32} alt="logo" />
       </div>
       {title && <div className="ml-2 text-2xl font-semibold">{title}</div>}

@@ -16,7 +16,7 @@ import siteData from '@/site.config';
 
 const Header = () => {
   const {
-    header: { logo, title, routes },
+    header: { routes },
   } = siteData;
 
   const pathname = usePathname();
@@ -35,15 +35,15 @@ const Header = () => {
         setTheme(theme == 'light' ? 'dark' : 'light');
       }}
     >
-      <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <Sun className="w-6 h-6 transition-all rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute w-6 h-6 transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
     </Button>
   );
 
   const RouteLinks = () => (
     <>
       {routes.map((route: any, index: number) => (
-        <div className="space-y-4" key={route.value}>
+        <div className="space-y-2" key={route.value}>
           <Link
             href={route.value}
             onClick={() => {
@@ -52,12 +52,13 @@ const Header = () => {
           >
             <Button
               variant={active == route.name ? 'secondary' : 'ghost'}
-              className="text-base w-full"
+              className="w-full text-base"
             >
+              <route.logo className="mr-2 w-5 h-5"/>
               {route.name}
             </Button>
           </Link>
-          {index != routes.length - 1 && <Separator />}
+          {index != routes.length - 1 && <Separator className="md:hidden" />}
         </div>
       ))}
     </>
@@ -65,8 +66,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="container flex justify-between items-center py-4">
-        <div className="md:hidden flex items-center justify-between w-full">
+      <header className="flex justify-between items-center py-4 container">
+        <div className="flex justify-between items-center md:hidden w-full">
           <Sheet
             open={open}
             onOpenChange={() => {
@@ -80,7 +81,7 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent
               side={'top'}
-              className="w-full space-y-4 p-12 text-sm"
+              className="space-y-4 p-12 w-full text-sm"
             >
               <RouteLinks />
             </SheetContent>
@@ -88,19 +89,10 @@ const Header = () => {
           <Logo />
           <ThemeToggleButton />
         </div>
-        <div className="hidden md:flex justify-between items-center w-full">
+        <div className="md:flex justify-between items-center hidden w-full">
           <Logo title={'DestinedCodes'} />
           <div className="flex items-center space-x-1">
-            {routes.map((route: any) => (
-              <Link href={route?.value} key={route?.value}>
-                <Button
-                  variant={active == route.name ? 'secondary' : 'ghost'}
-                  className="text-base"
-                >
-                  {route.name}
-                </Button>
-              </Link>
-            ))}
+            <RouteLinks />
             <ThemeToggleButton />
           </div>
         </div>

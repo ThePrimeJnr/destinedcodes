@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 import { getMetadata } from '@/site.config';
 
@@ -6,47 +7,40 @@ export const metadata: Metadata = getMetadata('home');
 
 const Home = () => {
   return (
-    <div className="container mx-auto py-24 px-4">
-      <div className="flex flex-col items-center text-center">
-        <h1 className="text-6xl font-extrabold text-indigo-600">
+    <div className="py-12 md:py-24">
+      <div className="flex flex-col">
+        <h1 className="font-extrabold text-6xl text-primary md:text-8xl tracking-tight">
           Destiny Saturday
         </h1>
-        <p className="text-gray-700 block text-4xl md:text-5xl font-bold leading-tight mt-4">
+        <p className="mt-4 font-bold text-4xl text-secondary md:text-5xl leading-tight tracking-tight">
           Full Stack Software &amp; DevOps Engineer
         </p>
 
-        <p className="mt-14 font-body max-w-4xl text-xl md:text-3xl text-gray-800">
-          I&apos;m passionate about{' '}
-          <span role="img" aria-label="coding" className="text-2xl">
-            💻
-          </span>{' '}
-          coding scalable systems,{' '}
-          <span role="img" aria-label="automation" className="text-2xl">
-            🤖
-          </span>{' '}
-          automating workflows,{' '}
-          <span role="img" aria-label="cloud" className="text-2xl">
-            ☁️
-          </span>{' '}
-          cloud infrastructure, and{' '}
-          <span role="img" aria-label="teamwork" className="text-2xl">
-            🤝
-          </span>{' '}
-          collaborative development
+        <p className="mt-10 md:mt-14 max-w-2xl text-lg text-primary md:text-2xl tracking-tight">
+          I&apos;m passionate about 💻 coding scalable systems, 🤖 automating
+          workflows, ☁️ cloud infrastructure, and 🤝 collaborative development
         </p>
 
-        <div className="mt-12 md:mt-16 w-full">
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center">
-            <div className="flex items-center bg-indigo-100 p-4 rounded-lg shadow-lg">
-              <span className="text-2xl font-semibold text-indigo-600">
-                100+ Repositories Managed
-              </span>
-            </div>
-            <div className="flex items-center bg-indigo-100 p-4 rounded-lg shadow-lg">
-              <span className="text-2xl font-semibold text-indigo-600">
-                Mentor at ALX Africa
-              </span>
-            </div>
+        <div className="flex md:flex-row flex-col gap-4 md:gap-12 mt-8 md:mt-12 py-4 w-full text-lg text-primary md:text-2xl tracking-tighter">
+          <div className="flex items-center">
+            <Image
+              src={'/images/hng.png'}
+              alt="HNG Logo"
+              width={32}
+              height={32}
+              className="mr-2 rounded-lg"
+            />
+            HNGx Finalist
+          </div>
+          <div className="flex items-center">
+            <Image
+              src={'/images/gitearn.png'}
+              alt="Gitearn Logo"
+              width={32}
+              height={32}
+              className="mr-2 rounded-full"
+            />
+            Creator, GitEarn
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import Intro from './components/intro.mdx';
+import { BookOpen, Code, Home } from 'lucide-react';
 
 const siteData: any = {
   author: 'Destiny Saturday',
@@ -13,11 +13,11 @@ const siteData: any = {
     logo: '/images/logo.png',
     title: 'DestinedCodes',
     routes: [
-      { name: 'Home', value: '/' },
-      { name: 'Blog', value: '/blog' },
-      { name: 'Projects', value: '/project' },
-      { name: 'Videos', value: '/video' },
-      { name: 'Contact', value: '/contact' },
+      { name: 'Home', value: '/', logo: Home },
+      { name: 'Blog', value: '/blog', logo: BookOpen },
+      { name: 'Projects', value: '/projects', logo: Code },
+      { name: 'Videos', value: '/videos', logo: Home },
+      { name: 'Contact', value: '/contact', logo: Home },
     ],
   },
 
