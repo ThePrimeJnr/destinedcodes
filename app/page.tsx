@@ -9,11 +9,11 @@ const Home = () => {
   return (
     <div className="py-12 md:py-24">
       <div className="flex flex-col">
-        <h1 className="font-extrabold text-6xl text-primary md:text-8xl tracking-tight">
+        <h1 className="font-extrabold text-6xl text-white dark:text-primary md:text-8xl tracking-tight">
           Destiny Saturday
         </h1>
         <p className="mt-4 font-bold text-4xl text-secondary md:text-5xl leading-tight tracking-tight">
-          Software &amp; DevOps Engineer
+          Full Stack Software &amp; DevOps Engineer
         </p>
 
         <p className="mt-10 md:mt-14 max-w-2xl text-lg text-primary md:text-2xl tracking-tight">
