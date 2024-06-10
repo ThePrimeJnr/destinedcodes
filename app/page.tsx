@@ -44,8 +44,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row py-24">
-        <div className="content">
+      <div className="flex md:flex-row flex-col py-24">
+        <div className="md:block flex flex-col md:content">
           <Image
             src={'/images/destiny-saturday.png'}
             alt="Destiny Saturday"
@@ -53,11 +53,11 @@ const Home = () => {
             height={94}
             className="float-left mr-4 rounded-full"
           />
-          <div className="item-body pl-2 font-bold text-6xl md:text-8xl tracking-wide">
+          <div className="item-body pl-2 font-bold text-5xl md:text-8xl tracking-wide">
             I build <div className="text-secondary">scalable softwares</div>
           </div>
         </div>
-        <div className="max-w-md text-2xl/10">
+        <div className="max-w-md text-lg/8 md:text-2xl/10">
           <div>
             A proficient software engineer specializing in DevOps, Full Stack,
             and Web3 development. Open to opportunities and collaboration.
