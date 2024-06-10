@@ -51,8 +51,8 @@ const Header = () => {
             }}
           >
             <Button
-              variant={active == route.name ? 'secondary' : 'ghost'}
-              className="w-full text-base"
+              variant={active == route.name ? 'default' : 'ghost'}
+              className="w-full"
             >
               <route.logo className="mr-2 w-5 h-5" />
               {route.name}
@@ -66,7 +66,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center md:py-4 py-2 container">
+      <header className="flex justify-between items-center py-2 md:py-4 container">
         <div className="flex justify-between items-center md:hidden w-full">
           <Sheet
             open={open}

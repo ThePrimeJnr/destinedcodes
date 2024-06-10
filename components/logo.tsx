@@ -12,10 +12,18 @@ const Logo = ({ title }: any) => {
 
   return (
     <Link className="flex justify-center items-center mr-4" href="/">
-      <div className="border-primary border-2 p-0.5 rounded-full">
-        <Image src={logo} height={32} width={32} alt="logo" />
+      <div className="border-2 border-primary dark:border-foreground p-0.5 rounded-full">
+        <Image
+          src={logo}
+          height={32}
+          width={32}
+          alt="destinedcodes logo"
+          className="rounded-full"
+        />
       </div>
-      {title && <div className="ml-2 text-2xl font-semibold">{title}</div>}
+      {title && (
+        <div className="md:hidden ml-2 font-semibold text-2xl">{title}</div>
+      )}
     </Link>
   );
 };

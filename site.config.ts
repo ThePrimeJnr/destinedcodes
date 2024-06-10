@@ -1,4 +1,15 @@
-import { BookOpen, CalendarCheck, Code, Home, Video } from 'lucide-react';
+import {
+  BookOpen,
+  CalendarCheck,
+  Code,
+  Github,
+  Home,
+  Linkedin,
+  Mail,
+  Twitter,
+  Video,
+  Youtube,
+} from 'lucide-react';
 
 const siteData: any = {
   author: 'Destiny Saturday',
@@ -22,13 +33,29 @@ const siteData: any = {
   },
 
   footer: {
-    socials: {
-      email: 'destinysaturday@example.com',
-      github: 'https://github.com/destinedcodes',
-      twitter: 'https://twitter.com/destinedcodes',
-      linkedin: 'https://www.linkedin.com/in/destinedcodes',
-      youtube: 'https://youtube.com/destinedcodes',
-    },
+    socials: [
+      { name: 'Mail', value: 'destinysaturday@example.com', logo: Mail },
+      {
+        name: 'GitHub',
+        value: 'https://github.com/destinedcodes',
+        logo: Github,
+      },
+      {
+        name: 'Twitter',
+        value: 'https://twitter.com/destinedcodes',
+        logo: Twitter,
+      },
+      {
+        name: 'LinkedIn',
+        value: 'https://www.linkedin.com/in/destinedcodes',
+        logo: Linkedin,
+      },
+      {
+        name: 'Youtube',
+        value: 'https://youtube.com/destinedcodes',
+        logo: Youtube,
+      },
+    ],
   },
 
   home: {
@@ -45,7 +72,9 @@ const siteData: any = {
     title: "Look What I've Done",
     description: "Some personal projects I've worked on.",
     getStatus: (status: string) => {
-      if (!status) return {};
+      if (!status) {
+        return {};
+      }
       switch (status) {
         case 'active':
           return { variant: 'default', text: 'ACTIVE' };
