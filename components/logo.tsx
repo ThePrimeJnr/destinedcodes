@@ -11,7 +11,7 @@ const Logo = ({ title }: any) => {
   } = siteData;
 
   return (
-    <Link className="flex justify-center items-center mr-4" href="/">
+    <Link className="flex justify-center items-center pr-4" href="/">
       <div className="border-2 border-primary dark:border-foreground p-0.5 rounded-full">
         <Image
           src={logo}
@@ -22,7 +22,9 @@ const Logo = ({ title }: any) => {
         />
       </div>
       {title && (
-        <div className="md:hidden ml-2 font-semibold text-2xl">{title}</div>
+        <div className="lg:flex hidden pl-2 font-semibold text-2xl">
+          {title}
+        </div>
       )}
     </Link>
   );

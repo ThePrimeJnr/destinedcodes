@@ -66,7 +66,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center py-2 md:py-4 container">
+      <header className="flex justify-between items-center p-4 md:p-6 container">
         <div className="flex justify-between items-center md:hidden w-full">
           <Sheet
             open={open}
