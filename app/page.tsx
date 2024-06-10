@@ -53,7 +53,7 @@ const Home = () => {
             height={94}
             className="float-left mr-4 rounded-full"
           />
-          <div className="item-body pl-2 font-bold text-5xl md:text-8xl tracking-wide">
+          <div className="item-body py-4 md:p-0 md:pl-2 font-bold text-5xl md:text-8xl">
             I build <div className="text-secondary">scalable softwares</div>
           </div>
         </div>
