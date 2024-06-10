@@ -7,16 +7,16 @@ export const metadata: Metadata = getMetadata('home');
 
 const Home = () => {
   return (
-    <>
-      <div id="hero" className="flex flex-col py-20 md:py-24">
-        <h1 className="font-extrabold text-6xl md:text-8xl dark:text-white">
+    <div className="pb-96">
+      <div id="hero" className="flex flex-col py-20">
+        <h1 className="font-bold text-6xl md:text-8xl dark:text-white">
           Destiny Saturday
         </h1>
-        <p className="pt-4 font-bold text-4xl text-secondary md:text-5xl">
+        <p className="pt-4 font-bold text-4xl text-secondary md:text-6xl">
           Full Stack Software &amp; DevOps Engineer
         </p>
 
-        <p className="pt-14 pb-12 max-w-2xl lg:max-w-5xl text-lg md:text-2xl p">
+        <p className="py-14 max-w-2xl lg:max-w-2xl text-lg/8 md:text-2xl/10">
           I&apos;m passionate about 💻 coding scalable systems, 🤖 automating
           workflows, ☁️ cloud infrastructure, and 🤝 collaborative development
         </p>
@@ -35,7 +35,7 @@ const Home = () => {
           <div className="flex items-center gap-x-2">
             <Image
               src={'/images/gitearn.png'}
-              alt="Gitearn Logo"
+              alt="GitEarn Logo"
               width={36}
               height={36}
               className="rounded-full"
@@ -44,7 +44,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
