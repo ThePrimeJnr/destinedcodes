@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CardDescription, CardTitle } from '@/components/ui/card';
 
-import siteData from '@/site.config';
+import { siteData } from '@/site.config';
 
 const ProjectContent = () => {
   const {

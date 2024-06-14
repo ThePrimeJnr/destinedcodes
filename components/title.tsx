@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 
 import { Separator } from '@/components/ui/separator';
 
-import siteData from '@/site.config';
+import { siteData } from '@/site.config';
 
 const Title = () => {
   const pathname = usePathname();

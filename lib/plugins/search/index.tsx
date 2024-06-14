@@ -7,7 +7,7 @@ import Cmdk from '@/lib/plugins/search/Cmdk';
 
 import { Button } from '@/components/ui/button';
 
-import siteData from '@/site.config';
+import { siteData } from '@/site.config';
 
 const Search = () => {
   const { search } = siteData;

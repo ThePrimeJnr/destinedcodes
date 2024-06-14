@@ -7,7 +7,7 @@ import Utterances from '@/lib/plugins/comments/utterances';
 
 import { Button } from '@/components/ui/button';
 
-import siteData from '@/site.config';
+import { siteData } from '@/site.config';
 
 const Comments = () => {
   const { comment } = siteData;
