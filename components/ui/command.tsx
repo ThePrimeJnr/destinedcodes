@@ -1,8 +1,8 @@
 'use client';
 
+import { Search } from '@mui/icons-material';
 import { type DialogProps } from '@radix-ui/react-dialog';
 import { Command as CommandPrimitive } from 'cmdk';
-import { Search } from '@mui/icons-material';
 import * as React from 'react';
 
 import { cn } from '@/lib/utils/shadcn';

@@ -37,9 +37,7 @@ const FeaturedProjects = () => {
 
   return (
     <div id="featured-projects" className="py-24">
-      <h2 className="font-bold text-4xl md:text-6xl mb-8">
-        Featured Projects
-      </h2>
+      <h2 className="font-bold text-4xl md:text-6xl mb-8">Featured Projects</h2>
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {featuredProjects.map((project, index) => (
           <div key={index}>

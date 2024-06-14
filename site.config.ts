@@ -1,15 +1,15 @@
 import {
-  HomeOutlined,
   ArticleOutlined,
   Code,
-  EventAvailableOutlined,
-  VideoLibraryOutlined,
-  MailOutlined,
-  GitHub,
-  X,
-  LinkedIn,
-  YouTube,
   DescriptionOutlined,
+  EventAvailableOutlined,
+  GitHub,
+  HomeOutlined,
+  LinkedIn,
+  MailOutlined,
+  VideoLibraryOutlined,
+  X,
+  YouTube,
 } from '@mui/icons-material';
 
 export const siteData: any = {
@@ -35,7 +35,11 @@ export const siteData: any = {
 
   footer: {
     socials: [
-      { name: 'Mail', value: 'destinysaturday@example.com', logo: MailOutlined },
+      {
+        name: 'Mail',
+        value: 'destinysaturday@example.com',
+        logo: MailOutlined,
+      },
       {
         name: 'GitHub',
         value: 'https://github.com/destinedcodes',
