@@ -12,12 +12,19 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: '1rem',
       screens: {
         '2xl': '1140px',
+        // tablet: '640px',
+        // laptop: '1024px',
+        // desktop: '1280px',
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        heading: ['var(--font-public-sans)'],
+        mono: ['var(--font-jetbrains)'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

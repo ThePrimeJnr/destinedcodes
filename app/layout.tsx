@@ -1,17 +1,15 @@
 import type { Metadata } from 'next';
-import { Public_Sans as Inter } from 'next/font/google';
 
+import fonts from '@/lib/fonts';
 import ProviderTheme from '@/lib/provider/provider-theme';
 
 import Body from '@/components/layouts/body';
 import Footer from '@/components/layouts/footer';
-import Header from '@/components/layouts/header';
+import Navbar from '@/components/layouts/navbar';
 
 import { getMetadata } from '@/site.config';
 
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = getMetadata('default');
 
@@ -25,9 +23,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.className} antialiased min-h-screen font-mono`}>
+      <body
+        className={`${fonts.publicSans.variable} ${fonts.jetBrains.variable} ${fonts.inter.variable} antialiased min-h-screen font-mono`}
+      >
         <ProviderTheme>
-          <Header />
+          <Navbar />
           <Body>{children}</Body>
           <Footer />
         </ProviderTheme>

@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
@@ -23,7 +23,7 @@ const DrawBack = () => {
               router.back();
             }}
           >
-            <ArrowLeft size={20} />
+            <ArrowLeft />
             <span className={'ml-2'}>Go Back</span>
           </Button>
         </div>
@@ -35,7 +35,7 @@ const DrawBack = () => {
         }}
       >
         <div className={'flex items-center'}>
-          <ArrowLeft size={16} />
+          <ArrowLeft />
           <span className={'ml-2'}>Go Back</span>
         </div>
       </div>

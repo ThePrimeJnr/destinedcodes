@@ -1,17 +1,18 @@
 import {
-  BookOpen,
-  CalendarCheck,
+  HomeOutlined,
+  ArticleOutlined,
   Code,
-  Github,
-  Home,
-  Linkedin,
-  Mail,
-  Twitter,
-  Video,
-  Youtube,
-} from 'lucide-react';
+  EventAvailableOutlined,
+  VideoLibraryOutlined,
+  MailOutlined,
+  GitHub,
+  X,
+  LinkedIn,
+  YouTube,
+  DescriptionOutlined,
+} from '@mui/icons-material';
 
-const siteData: any = {
+export const siteData: any = {
   author: 'Destiny Saturday',
   title: 'Destiny Saturday (DestinedCodes)',
   description:
@@ -24,36 +25,41 @@ const siteData: any = {
     logo: '/images/logo.png',
     title: 'DestinedCodes',
     routes: [
-      { name: 'Home', value: '/', logo: Home },
-      { name: 'Blog', value: '/blog', logo: BookOpen },
+      { name: 'Home', value: '/', logo: HomeOutlined },
+      { name: 'Blog', value: '/blog', logo: ArticleOutlined },
       { name: 'Projects', value: '/projects', logo: Code },
-      { name: 'Videos', value: '/videos', logo: Video },
-      { name: 'Contact', value: '/contact', logo: CalendarCheck },
+      { name: 'Videos', value: '/videos', logo: VideoLibraryOutlined },
+      { name: 'Contact', value: '/contact', logo: EventAvailableOutlined },
     ],
   },
 
   footer: {
     socials: [
-      { name: 'Mail', value: 'destinysaturday@example.com', logo: Mail },
+      { name: 'Mail', value: 'destinysaturday@example.com', logo: MailOutlined },
       {
         name: 'GitHub',
         value: 'https://github.com/destinedcodes',
-        logo: Github,
+        logo: GitHub,
       },
       {
-        name: 'Twitter',
+        name: 'X',
         value: 'https://twitter.com/destinedcodes',
-        logo: Twitter,
+        logo: X,
       },
       {
         name: 'LinkedIn',
         value: 'https://www.linkedin.com/in/destinedcodes',
-        logo: Linkedin,
+        logo: LinkedIn,
       },
       {
         name: 'Youtube',
         value: 'https://youtube.com/destinedcodes',
-        logo: Youtube,
+        logo: YouTube,
+      },
+      {
+        name: 'Resume',
+        value: 'https://youtube.com/destinedcodes',
+        logo: DescriptionOutlined,
       },
     ],
   },
@@ -157,8 +163,6 @@ const siteData: any = {
     engine: 'cmdk',
   },
 };
-
-export default siteData;
 
 export function getMetadata(page: string) {
   const pagesMetadata: { [key: string]: any } = {

@@ -4,66 +4,66 @@
 
 @layer base {
   :root {
-    /* Azure Fresh color palette */
-    --background: 204 100% 97%;
-    --foreground: 0 0% 15%;
+    --night: 220 26% 14%;
+    --battleship-gray: 0 0% 60%;
+    --white-smoke: 0 0% 96%;
+    --blue-crayola: 209 62% 50%;
+    --yale-blue: 211 61% 43%;
 
-    --card: 204 100% 97%;
-    --card-foreground: 0 0% 15%;
+    --background: var(--white-smoke);
+    --foreground: var(--night);
 
-    --popover: 204 100% 97%;
-    --popover-foreground: 0 0% 15%;
+    --primary: var(--white-smoke);
+    --primary-foreground: var(--night);
 
-    --primary: 199 97% 42%;
-    --primary-foreground: 204 100% 97%;
+    --secondary: var(--blue-crayola);
+    --secondary-foreground: var(--white-smoke);
 
-    --secondary: 198 87% 28%;
-    --secondary-foreground: 204 100% 97%;
+    --accent: var(--yale-blue);
+    --accent-foreground: var(--white-smoke);
 
-    --muted: 0 0% 60%;
-    --muted-foreground: 0 0% 15%;
+    --muted: var(--battleship-gray);
+    --muted-foreground: var(--white-smoke);
 
-    --accent: 199 97% 42%;
-    --accent-foreground: 204 100% 97%;
+    --destructive: 0, 100%, 60%;
+    --destructive-foreground: var(--white-smoke);
 
-    --destructive: 0 0% 15%;
-    --destructive-foreground: 204 100% 97%;
+    --card: var(--white-smoke);
+    --card-foreground: var(--night);
 
-    --border: 204 100% 97%;
-    --input: 0 0% 60%;
-    --ring: 204 100% 97%;
+    --popover: var(--white-smoke);
+    --popover-foreground: var(--night);
+
+    --input: var(--battleship-gray);
+    --ring: var(--battleship-gray);
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 15%;
-    --foreground: 204 100% 97%;
+    --background: var(--night);
+    --foreground: var(--white-smoke);
 
-    --card: 0 0% 15%;
-    --card-foreground: 204 100% 97%;
+    --primary: var(--night);
+    --primary-foreground: var(--white-smoke);
 
-    --popover: 0 0% 15%;
-    --popover-foreground: 204 100% 97%;
+    --secondary: var(--yale-blue);
+    --secondary-foreground: var(--white-smoke);
 
-    --primary: 198 87% 28%;
-    --primary-foreground: 204 100% 97%;
+    --accent: var(--blue-crayola);
+    --accent-foreground: var(--white-smoke);
 
-    --secondary: 199 70% 40%;
-    --secondary-foreground: 204 100% 97%;
+    --muted: var(--battleship-gray);
+    --muted-foreground: var(--white-smoke);
 
-    --muted: 199 70% 40%;
-    --muted-foreground: 204 100% 97%;
+    --card: var(--night);
+    --card-foreground: var(--white-smoke);
 
-    --accent: 198 87% 28%;
-    --accent-foreground: 204 100% 97%;
+    --popover: var(--night);
+    --popover-foreground: var(--white-smoke);
 
-    --destructive: 199 70% 40%;
-    --destructive-foreground: 204 100% 97%;
-
-    --border: 0 0% 15%;
-    --input: 199 70% 40%;
-    --ring: 0 0% 84%;
+    --input: var(--battleship-gray);
+    --ring: var(--blue-crayola);
   }
 
   * {
@@ -72,9 +72,26 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter);
   }
 
-  .bg-border-color {
-    background-color: hsl(var(--foreground));
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-public-sans);
+  }
+
+  p,
+  div,
+  span {
+    font-family: var(--font-inter);
+  }
+
+  pre,
+  code {
+    font-family: var(--font-jetbrains);
   }
 }

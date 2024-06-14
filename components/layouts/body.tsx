@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const Body = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="md:prose-lg dark:prose-invert container prose">
+    <main className="container px-4 md:px-6">
       {children}
     </main>
   );

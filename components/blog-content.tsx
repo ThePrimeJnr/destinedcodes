@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from '@mui/icons-material';
 import Link from 'next/link';
 
 import Time from '@/components/time';
@@ -39,7 +39,7 @@ const BlogContent = ({ posts }: any) => {
           <div className={'flex justify-end'}>
             <Link href={`/blog/${post.id}`}>
               <Button>
-                Read More <ArrowRight size={16} className={'ml-2'} />
+                Read More <ArrowRight className={'ml-2'} />
               </Button>
             </Link>
           </div>
