@@ -1,6 +1,7 @@
 import { GitHub, Language } from '@mui/icons-material';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import Link from 'next/link';
 import path from 'path';
@@ -46,10 +47,13 @@ const FeaturedProjects = () => {
               alt={project.title}
               width={400}
               height={200}
+              priority={true}
               className="rounded-xl mb-4 w-full h-auto"
             />
             <h3 className="font-bold text-2xl mb-2">{project.title}</h3>
-            <p className="text-lg mb-4">{project.description}</p>
+            <div className="text-lg mb-4">
+              <MDXRemote source={project.description} />
+            </div>
             <div className="flex gap-4">
               <Link
                 href={project.github}

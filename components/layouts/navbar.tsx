@@ -51,7 +51,10 @@ const Navbar = () => {
               router.push(route.value);
             }}
           >
-            <route.logo className="mr-2 w-5 h-5" />
+            <route.logo
+              className="mr-2"
+              style={{ maxWidth: 20, maxHeight: 20 }}
+            />
             {route.name}
           </Button>
           {index !== routes.length - 1 && <Separator className="md:hidden" />}

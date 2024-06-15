@@ -18,6 +18,7 @@ const Logo = ({ title }: any) => {
           height={32}
           width={32}
           alt="destinedcodes logo"
+          priority={true}
           className="rounded-full"
         />
       </div>

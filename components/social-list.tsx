@@ -10,21 +10,16 @@ const SocialList = () => {
   return (
     <div className="grid grid-cols-3 gap-8 mt-8 max-w-sm">
       {socials.map((social: any) => (
-        <div
-          className="hover:scale-110 transition-transform duration-200 hover:text-secondary"
-          key={social.value}
+        <Link
+          href={
+            social.name === 'Mail' ? `mailto:${social.value}` : social.value
+          }
+          key={social.name}
+          className="hover:scale-110 transition-transform duration-200 hover:text-secondary flex items-center"
         >
-          {social.name === 'Mail' ? (
-            <Link href={`mailto:${social.value}`}>
-              <social.logo />
-            </Link>
-          ) : (
-            <Link href={social.value}>
-              <social.logo />
-            </Link>
-          )}
+          <social.logo />
           <span className="underline ml-2">{social.name}</span>
-        </div>
+        </Link>
       ))}
     </div>
   );

@@ -24,6 +24,7 @@ const Hero = () => {
             alt="HNG Logo"
             width={36}
             height={36}
+            priority={true}
             className="rounded-lg"
           />
           HNGx Finalist
@@ -34,6 +35,7 @@ const Hero = () => {
             alt="GitEarn Logo"
             width={36}
             height={36}
+            priority={true}
             className="rounded-full"
           />
           Creator, GitEarn
