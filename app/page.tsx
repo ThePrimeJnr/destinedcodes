@@ -12,7 +12,7 @@ export const metadata: Metadata = getMetadata('home');
 
 const Home = () => {
   return (
-    <div className="pb-96">
+    <div className="space-y-40 py-20">
       <Hero />
       <About />
       <ToolsAndSoftware />

@@ -327,7 +327,7 @@ const ToolsAndSoftware = () => {
   };
 
   return (
-    <div id="tools-software" className="py-24">
+    <div id="tools-software">
       <h2 className="font-bold text-4xl md:text-6xl mb-4">
         Tools &amp; Softwares
       </h2>
@@ -351,7 +351,7 @@ const ToolsAndSoftware = () => {
           >
             <tool.icon color="default" size={32} />
             {activeIndex === index && (
-              <div className="absolute text-center bg-background brightness-90 dark:brightness-150 rounded-lg p-3 z-10">
+              <div className="absolute text-center bg-background brightness-90 dark:brightness-150 opacity-85 rounded-lg p-3 z-10">
                 <h3 className="text-2xl font-semibold mb-2">{tool.name}</h3>
                 <p>{tool.description}</p>
               </div>

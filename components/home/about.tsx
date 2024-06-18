@@ -4,7 +4,7 @@ import SocialList from '@/components/social-list';
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-col lg:flex-row py-24">
+    <div id="about" className="flex flex-col lg:flex-row">
       <div className="lg:block">
         <Image
           src={'/images/destiny-saturday.png'}

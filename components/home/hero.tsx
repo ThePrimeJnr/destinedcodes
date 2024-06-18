@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div id="hero" className="flex flex-col py-24">
+    <div id="hero" className="flex flex-col">
       <h1 className="font-bold text-[4rem] md:text-[7rem] leading-none ">
         Destiny Saturday
       </h1>

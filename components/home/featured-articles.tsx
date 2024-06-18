@@ -35,19 +35,18 @@ const FeaturedArticles = () => {
     .filter((article) => article.featured);
 
   return (
-    <div id="featured-articles" className="py-24">
+    <div id="featured-articles">
       <h2 className="font-bold text-4xl md:text-6xl mb-8 text-center md:text-left">
         Featured Articles
       </h2>
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div>
         {featuredArticles.map((article, index) => (
-          <div key={index}>
+          <div key={index} className="flex flex-row justify-between">
             <Image
               src={article.image}
               alt={article.title}
               width={400}
               height={200}
-              className="w-full h-auto rounded-xl"
             />
             <div>
               <h3 className="font-bold text-2xl mb-2">{article.title}</h3>
@@ -66,10 +65,7 @@ const FeaturedArticles = () => {
                   </span>
                 ))}
               </div>
-              <Link
-                href={`/articles/${index}`}
-                className="text-primary underline"
-              >
+              <Link href={`/articles/${index}`} className="underline">
                 Read Article
               </Link>
             </div>
