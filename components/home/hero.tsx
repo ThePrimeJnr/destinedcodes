@@ -20,7 +20,7 @@ const Hero = () => {
       >
         <div className="flex items-center gap-x-2">
           <Image
-            src={'/images/hng.png'}
+            src={'/static/logos/hng.png'}
             alt="HNG Logo"
             width={36}
             height={36}
@@ -31,7 +31,7 @@ const Hero = () => {
         </div>
         <div className="flex items-center gap-x-2">
           <Image
-            src={'/images/gitearn.png'}
+            src={'/static/logos/gitearn.png'}
             alt="GitEarn Logo"
             width={36}
             height={36}

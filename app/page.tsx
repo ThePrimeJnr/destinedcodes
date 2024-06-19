@@ -12,12 +12,12 @@ export const metadata: Metadata = getMetadata('home');
 
 const Home = () => {
   return (
-    <div className="space-y-40 py-20">
+    <div className="space-y-20 md:space-y-36 py-20">
       <Hero />
       <About />
       <ToolsAndSoftware />
       <FeaturedProjects />
-      <FeaturedArticles />
+      {/* <FeaturedArticles /> */}
     </div>
   );
 };

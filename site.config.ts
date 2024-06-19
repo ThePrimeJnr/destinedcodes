@@ -22,7 +22,7 @@ export const siteData: any = {
   theme: 'light',
 
   header: {
-    logo: '/images/logo.png',
+    logo: '/static/logos/destinedcodes.png',
     title: 'DestinedCodes',
     routes: [
       { name: 'Home', value: '/', logo: HomeOutlined },

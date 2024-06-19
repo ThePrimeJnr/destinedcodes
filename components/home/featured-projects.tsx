@@ -39,26 +39,33 @@ const FeaturedProjects = () => {
     .filter((project) => project.featured);
 
   return (
-    <div id="featured-projects" className="py-24">
-      <h2 className="font-bold text-4xl md:text-6xl mb-12">
+    <div id="featured-projects">
+      <h2 className="font-bold text-4xl md:text-6xl mb-10">
         Featured Projects
       </h2>
-      <div className="space-y-20">
+      <div className="space-y-10">
         {featuredProjects.map((project, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row md:justify-between items-center md:items-start"
           >
-            <div className="max-w-xl text-lg/8 md:text-xl/8 mb-6 md:mb-0 md:mr-6">
-              <h3 className="text-secondary font-bold text-3xl mb-4">
+            <div className="max-w-xl text-lg/8 md:text-xl/8 space-y-4">
+              <h3 className="text-secondary font-bold text-3xl">
                 {project.title}
               </h3>
               <MDXRemote source={project.description} />
-              <div className="flex flex-wrap gap-2 mt-4">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={400}
+                height={250}
+                className="rounded-lg md:hidden"
+              />
+              <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-muted/30 py-1 px-2 rounded-md text-sm"
+                    className="bg-muted/30 p-1 rounded-lg text-sm"
                   >
                     {tech}
                   </span>
@@ -90,7 +97,7 @@ const FeaturedProjects = () => {
               alt={project.title}
               width={400}
               height={250}
-              className="rounded-lg"
+              className="rounded-lg hidden md:flex"
             />
           </div>
         ))}
