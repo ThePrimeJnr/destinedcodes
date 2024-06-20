@@ -59,7 +59,7 @@ export interface Tool {
   icon: IconType;
   type:
     | 'Languages'
-    | 'Frameworks and Libraries'
+    | 'Frameworks/Libraries'
     | 'Databases'
     | 'Cloud/DevOps'
     | 'Tools';
@@ -118,101 +118,101 @@ const tools: Tool[] = [
     type: 'Languages',
   },
 
-  // Frameworks and Libraries
+  // Frameworks/Libraries
   {
     name: 'ReactJS',
     icon: SiReact,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'NextJS',
     icon: SiNextdotjs,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'TailwindCSS',
     icon: SiTailwindcss,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Flutter',
     icon: SiFlutter,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Chakra UI',
     icon: SiChakraui,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Frappe',
     icon: SiFrappe,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Django',
     icon: SiDjango,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Flask',
     icon: SiFlask,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'FastAPI',
     icon: SiFastapi,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Node.js',
     icon: SiNodedotjs,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'ExpressJS',
     icon: SiExpress,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'NestJS',
     icon: SiNestjs,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'MDX',
     icon: SiLinux, // Add the appropriate icon here
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Three.js',
     icon: SiLinux, // Add the appropriate icon here
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'GraphQL',
     icon: SiGraphql,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Socket.io',
     icon: SiSocketdotio,
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Chart.js',
     icon: SiLinux, // Add the appropriate icon here
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'Prisma',
     icon: SiLinux, // Add the appropriate icon here
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
   {
     name: 'SQLAlchemy',
     icon: SiLinux, // Add the appropriate icon here
-    type: 'Frameworks and Libraries',
+    type: 'Frameworks/Libraries',
   },
 
   // Databases

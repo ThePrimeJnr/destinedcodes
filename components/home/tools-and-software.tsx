@@ -18,7 +18,7 @@ const ToolsAndSoftware: React.FC = () => {
 
   const [activeTab, setActiveTab] = useState(Object.keys(groupedTools)[0]);
   const [underlineStyle, setUnderlineStyle] = useState({});
-  const tabsRef = useRef([]);
+  const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
     const activeTabIndex = Object.keys(groupedTools).indexOf(activeTab);
@@ -49,7 +49,7 @@ const ToolsAndSoftware: React.FC = () => {
         {Object.keys(groupedTools).map((type, index) => (
           <button
             key={type}
-            ref={(el) => (tabsRef.current[index] = el)}
+            ref={(el: any) => (tabsRef.current[index] = el)}
             className={`tab-button mr-4 mb-2 md:mr-6 px-2 py-1 text-md font-medium ${activeTab === type ? 'text-secondary active-tab' : 'hover:text-secondary/50'}`}
             onClick={() => setActiveTab(type)}
           >

@@ -10,6 +10,7 @@ interface Article {
   publishedAt: string;
   image: string;
   tags: string[];
+  slug: string;
   featured: boolean;
 }
 
@@ -29,6 +30,7 @@ const FeaturedArticles = () => {
         publishedAt: data.publishedAt,
         image: data.image,
         tags: data.tags,
+        slug: filename.replace('.md', ''),
         featured: data.featured,
       } as Article;
     })
@@ -40,30 +42,44 @@ const FeaturedArticles = () => {
         Featured Articles
       </h2>
       {featuredArticles.map((article, index) => (
-        <div key={index} className="flex flex-row justify-between mb-6">
-          <Image
-            src={article.image}
-            alt={article.title}
-            width={400}
-            height={200}
-          />
-          <div>
-            <h3 className="font-bold text-2xl mb-2">{article.title}</h3>
-            <p className="text-sm text-gray-500 mb-4">
+        <div
+          key={index}
+          className="flex flex-row justify-between items-center mb-6"
+        >
+          <div className="flex-shrink-0 w-1/3">
+            <Image
+              src={article.image}
+              alt={article.title}
+              width={400}
+              height={200}
+              layout="responsive"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
+          <div className="flex-grow pl-4">
+            <h3 className="font-bold text-xl md:text-2xl mb-2">
+              {article.title}
+            </h3>
+            <p className="text-sm text-gray-500 mb-2">
               {new Date(article.publishedAt).toLocaleDateString()} - 5 min read
             </p>
-            <p className="text-lg mb-4">{article.description}</p>
-            <div className="flex gap-2 mb-4">
+            <p className="text-base md:text-lg mb-4">{article.description}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
               {article.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="text-xs font-semibold inline-block py-1 px-2 rounded text-secondary bg-secondary-light last:mr-0 mr-1"
+                  className="text-xs font-semibold inline-block py-1 px-2 rounded text-secondary bg-secondary-light"
                 >
                   #{tag}
                 </span>
               ))}
             </div>
-            <Link href={`/articles/${index}`} className="underline">
+            <Link
+              href={`/articles/${article.slug}`}
+              passHref
+              className="text-primary hover:underline focus:underline"
+            >
               Read Article
             </Link>
           </div>

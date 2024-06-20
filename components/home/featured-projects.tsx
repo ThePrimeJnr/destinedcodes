@@ -1,4 +1,5 @@
 import { GitHub, Language } from '@mui/icons-material';
+import { ArrowRightAlt } from '@mui/icons-material';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -101,6 +102,15 @@ const FeaturedProjects = () => {
             />
           </div>
         ))}
+        <Link
+          href="/projects"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium hover:text-secondary underline flex items-center gap-2"
+        >
+          View All Projects
+          <ArrowRightAlt />
+        </Link>
       </div>
     </div>
   );
