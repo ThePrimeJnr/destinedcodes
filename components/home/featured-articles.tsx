@@ -39,39 +39,36 @@ const FeaturedArticles = () => {
       <h2 className="font-bold text-4xl md:text-6xl mb-8 text-center md:text-left">
         Featured Articles
       </h2>
-      <div>
-        {featuredArticles.map((article, index) => (
-          <div key={index} className="flex flex-row justify-between">
-            <Image
-              src={article.image}
-              alt={article.title}
-              width={400}
-              height={200}
-            />
-            <div>
-              <h3 className="font-bold text-2xl mb-2">{article.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                {new Date(article.publishedAt).toLocaleDateString()} - 5 min
-                read
-              </p>
-              <p className="text-lg mb-4">{article.description}</p>
-              <div className="flex gap-2 mb-4">
-                {article.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-xs font-semibold inline-block py-1 px-2 rounded text-secondary bg-secondary-light last:mr-0 mr-1"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-              <Link href={`/articles/${index}`} className="underline">
-                Read Article
-              </Link>
+      {featuredArticles.map((article, index) => (
+        <div key={index} className="flex flex-row justify-between mb-6">
+          <Image
+            src={article.image}
+            alt={article.title}
+            width={400}
+            height={200}
+          />
+          <div>
+            <h3 className="font-bold text-2xl mb-2">{article.title}</h3>
+            <p className="text-sm text-gray-500 mb-4">
+              {new Date(article.publishedAt).toLocaleDateString()} - 5 min read
+            </p>
+            <p className="text-lg mb-4">{article.description}</p>
+            <div className="flex gap-2 mb-4">
+              {article.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="text-xs font-semibold inline-block py-1 px-2 rounded text-secondary bg-secondary-light last:mr-0 mr-1"
+                >
+                  #{tag}
+                </span>
+              ))}
             </div>
+            <Link href={`/articles/${index}`} className="underline">
+              Read Article
+            </Link>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Home = () => {
       <About />
       <ToolsAndSoftware />
       <FeaturedProjects />
-      {/* <FeaturedArticles /> */}
+      <FeaturedArticles />
     </div>
   );
 };
