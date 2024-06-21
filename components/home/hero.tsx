@@ -25,7 +25,6 @@ const Hero = () => {
             alt="HNG Logo"
             width={32}
             height={32}
-            priority={true}
             className="rounded-lg"
           />
           HNGx Finalist

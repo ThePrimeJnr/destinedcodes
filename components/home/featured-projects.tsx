@@ -66,7 +66,7 @@ const FeaturedProjects = () => {
                   alt={project.title}
                   width={400}
                   height={250}
-                  priority={true}
+                  
                   className="rounded-lg object-cover h-[250px]"
                 />
               </Link>
@@ -112,7 +112,7 @@ const FeaturedProjects = () => {
                 alt={project.title}
                 width={400}
                 height={250}
-                priority={true}
+                
                 className="rounded-lg object-cover h-[250px]"
               />
             </Link>

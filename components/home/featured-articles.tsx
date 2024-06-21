@@ -62,7 +62,7 @@ const FeaturedArticles = () => {
               alt={article.title}
               width={350}
               height={220}
-              priority={true}
+              
               className="rounded-lg object-cover h-[220px]"
             />
             <div className="text-lg/8">
@@ -70,14 +70,14 @@ const FeaturedArticles = () => {
                 {article.title}
               </h3>
               <MDXRemote source={article.description} />
-              <p className="text-sm tracking-wider text-gray-500 my-2">
+              <p className="text-sm tracking-wider opacity-70 my-2">
                 <Time date={article.date} /> • {article.readingTime}
               </p>
               <div className="flex flex-wrap gap-2">
                 {article.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="bg-secondary/15 font-medium p-1 rounded-lg text-sm text-secondary"
+                    className="bg-muted/20 font-medium p-1 rounded-lg text-sm"
                   >
                     {tag}
                   </span>
