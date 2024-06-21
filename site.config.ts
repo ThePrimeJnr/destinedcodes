@@ -16,10 +16,11 @@ const root = `https://destinedcodes.com`;
 
 export const siteData: any = {
   author: 'Destiny Saturday',
-  title: 'Destiny Saturday (DestinedCodes)',
+  title:
+    'Destiny Saturday (DestinedCodes) - Full Stack Software and DevOps Engineer',
   description:
-    "Destiny Saturday's personal portfolio and blog, created with Next.js, Shadcn-ui, and Tailwind.css.",
-  language: 'en',
+    'A proficient software engineer specializing in DevOps, Full Stack, and Web3 development. Passionate about cloud engineering, atomation and artificial intelligence.',
+  locale: 'en',
   url: 'https://www.destinedcodes.com',
   theme: 'light',
 
@@ -77,7 +78,7 @@ export function getMetadata(page: string) {
       description: siteData.description,
       openGraph: {
         type: 'website',
-        locale: 'en',
+        language: 'en',
         url: `${root}`,
         siteName: 'destinedcodes.com',
         title: `${siteData.title} - Home`,
@@ -88,7 +89,7 @@ export function getMetadata(page: string) {
             width: 1200,
             height: 630,
             type: 'image/png',
-            image: '/images/og-image.png',
+            image: 'https://destinedcodes.com/images/og-image.png',
           },
         ],
       },
@@ -143,7 +144,7 @@ export function getMetadata(page: string) {
           width: 1200,
           height: 630,
           type: 'image/png',
-          image: '/images/og-image.png',
+          image: 'https://destinedcodes.com/images/og-image.png',
         },
       ],
     },
