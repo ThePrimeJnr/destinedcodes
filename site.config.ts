@@ -84,11 +84,11 @@ export function getMetadata(page: string) {
         description: siteData.description,
         images: [
           {
-            url: `${root}`,
+            url: 'https://destinedcodes.com',
             width: 1200,
             height: 630,
             type: 'image/png',
-            image: `${root}/images/og-image.png`,
+            image: 'https://destinedcodes.com/images/og-image.png',
           },
         ],
       },
@@ -96,17 +96,6 @@ export function getMetadata(page: string) {
         card: 'summary_large_image',
         site: '@destinedcodes',
         creator: '@destinedcodes',
-        title: `${siteData.title} - Home`,
-        description: siteData.description,
-        images: [
-          {
-            url: `${root}`,
-            width: 1200,
-            height: 630,
-            type: 'image/png',
-            image: `${root}/images/og-image.png`,
-          },
-        ],
       },
     },
     blog: {
@@ -141,6 +130,28 @@ export function getMetadata(page: string) {
     url: siteData.url,
     theme: siteData.theme,
     language: siteData.language,
+    openGraph: {
+      type: 'website',
+      locale: 'en',
+      url: `${root}`,
+      siteName: 'destinedcodes.com',
+      title: `${siteData.title} - Home`,
+      description: siteData.description,
+      images: [
+        {
+          url: 'https://destinedcodes.com',
+          width: 1200,
+          height: 630,
+          type: 'image/png',
+          image: 'https://destinedcodes.com/images/og-image.png',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@destinedcodes',
+      creator: '@destinedcodes',
+    },
   };
 
   return pagesMetadata[page] || defaultMetadata;
