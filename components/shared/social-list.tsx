@@ -1,20 +1,11 @@
+import socials, { Social } from '@/data/socials';
 import Link from 'next/link';
-
-import { siteData } from '@/site.config';
-
-type Social = {
-  name: string;
-  value: string;
-  logo: React.ComponentType;
-};
 
 type SocialListProps = {
   showNames?: boolean;
 };
 
 const SocialList: React.FC<SocialListProps> = ({ showNames = true }) => {
-  const { socials } = siteData;
-
   const filteredSocials = showNames
     ? socials
     : socials.filter((social: Social) => social.name !== 'Resume');

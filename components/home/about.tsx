@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import SocialList from '@/components/social-list';
+import SocialList from '@/components/shared/social-list';
 
 const About = () => {
   return (

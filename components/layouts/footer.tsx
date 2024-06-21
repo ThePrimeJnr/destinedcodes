@@ -1,4 +1,4 @@
-import SocialList from '../social-list';
+import SocialList from '../shared/social-list';
 
 const Footer = () => {
   return (

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
+import getMetadata from '@/lib/utils/metadata';
+
 import About from '@/components/home/about';
 import FeaturedArticles from '@/components/home/featured-articles';
 import FeaturedProjects from '@/components/home/featured-projects';
 import Hero from '@/components/home/hero';
 import ToolsAndSoftware from '@/components/home/tools-and-software';
-
-import { getMetadata } from '@/site.config';
 
 export const metadata: Metadata = getMetadata('home');
 

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import path from 'path';
 import readingTime from 'reading-time';
 
-import Time from '../time';
+import Time from '../shared/time';
 
 interface Article {
   title: string;
