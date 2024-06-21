@@ -84,11 +84,11 @@ export function getMetadata(page: string) {
         description: siteData.description,
         images: [
           {
-            url: 'https://destinedcodes.com',
+            url: 'https://destinedcodes.com/images/og-image.png',
             width: 1200,
             height: 630,
             type: 'image/png',
-            image: 'https://destinedcodes.com/images/og-image.png',
+            image: '/images/og-image.png',
           },
         ],
       },
@@ -139,11 +139,11 @@ export function getMetadata(page: string) {
       description: siteData.description,
       images: [
         {
-          url: 'https://destinedcodes.com',
+          url: 'https://destinedcodes.com/images/og-image.png',
           width: 1200,
           height: 630,
           type: 'image/png',
-          image: 'https://destinedcodes.com/images/og-image.png',
+          image: '/images/og-image.png',
         },
       ],
     },
