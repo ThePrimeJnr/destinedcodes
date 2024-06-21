@@ -3,10 +3,13 @@ import {
   SiAmazonaws,
   SiAmazons3,
   SiApache,
+  SiAsana,
   SiAzuredevops,
+  SiBootstrap,
   SiC,
   SiCelery,
   SiChakraui,
+  SiChartdotjs,
   SiCircleci,
   SiCloudinary,
   SiCodecov,
@@ -24,13 +27,17 @@ import {
   SiGithub,
   SiGithubactions,
   SiGnubash,
+  SiGooglecloud,
+  SiGooglecolab,
   SiGraphql,
   SiHtml5,
   SiJavascript,
   SiJira,
+  SiJupyter,
   SiKubernetes,
   SiLinux,
   SiLua,
+  SiMdx,
   SiMongodb,
   SiMysql,
   SiNestjs,
@@ -40,12 +47,15 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiPrecommit,
+  SiPrisma,
   SiPython,
   SiReact,
   SiRedis,
   SiSentry,
   SiSocketdotio,
+  SiSqlalchemy,
   SiTailwindcss,
+  SiThreedotjs,
   SiTravisci,
   SiTrello,
   SiTypescript,
@@ -135,6 +145,11 @@ const tools: Tool[] = [
     type: 'Frameworks/Libraries',
   },
   {
+    name: 'Bootstrap',
+    icon: SiBootstrap,
+    type: 'Frameworks/Libraries',
+  },
+  {
     name: 'Flutter',
     icon: SiFlutter,
     type: 'Frameworks/Libraries',
@@ -181,12 +196,12 @@ const tools: Tool[] = [
   },
   {
     name: 'MDX',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiMdx,
     type: 'Frameworks/Libraries',
   },
   {
     name: 'Three.js',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiThreedotjs,
     type: 'Frameworks/Libraries',
   },
   {
@@ -201,17 +216,17 @@ const tools: Tool[] = [
   },
   {
     name: 'Chart.js',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiChartdotjs,
     type: 'Frameworks/Libraries',
   },
   {
     name: 'Prisma',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiPrisma,
     type: 'Frameworks/Libraries',
   },
   {
     name: 'SQLAlchemy',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiSqlalchemy,
     type: 'Frameworks/Libraries',
   },
 
@@ -265,12 +280,12 @@ const tools: Tool[] = [
   },
   {
     name: 'Google Cloud',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiGooglecloud,
     type: 'Cloud/DevOps',
   },
   {
-    name: 'Google Collab',
-    icon: SiLinux, // Add the appropriate icon here
+    name: 'Google Colab',
+    icon: SiGooglecolab,
     type: 'Cloud/DevOps',
   },
   {
@@ -342,7 +357,7 @@ const tools: Tool[] = [
   },
   {
     name: 'Asana',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiAsana,
     type: 'Tools',
   },
   {
@@ -377,7 +392,7 @@ const tools: Tool[] = [
   },
   {
     name: 'Jupyter Notebook',
-    icon: SiLinux, // Add the appropriate icon here
+    icon: SiJupyter,
     type: 'Tools',
   },
 ];

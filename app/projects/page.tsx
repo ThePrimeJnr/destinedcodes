@@ -7,7 +7,8 @@ import { getMetadata } from '@/site.config';
 export const metadata: Metadata = getMetadata('home');
 
 const Projects = () => {
-  return <ProjectContent />;
+  // return <ProjectContent />
+  return 404;
 };
 
 export default Projects;

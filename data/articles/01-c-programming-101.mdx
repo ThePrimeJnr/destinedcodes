@@ -1,0 +1,104 @@
+---
+title: C Programming 101 🚀
+description: Dive into C programming with this detailed guide. Learn about its history, fundamental syntax, and write your first 'Hello World' program.
+date: 2023-07-30
+image: /images/articles/c-hello-world.png
+tags:
+  - c-programming
+  - hello-world
+  - gcc-compiler
+featured: true
+---
+
+In this blog, we'll embark on an exhilarating journey into the world of C programming. From its rich history and influential pioneers to the basic syntax and the legendary "Hello World" program, we'll explore everything you need to know to begin your adventure in this powerful programming language. By the end of this guide, even if you're a first-timer, you'll be able to write your own C programs and grasp the fundamentals of this fascinating language. Let's get started! 😃
+
+## Why C Programming Is Awesome 🤷🏽
+
+Before we delve into the technical details, let's take a moment to appreciate why C programming is considered awesome:
+
+1. **Efficiency:** C is renowned for its efficiency and performance. It allows you to write low-level code that can be finely tuned for specific hardware, making it ideal for system programming and embedded systems.
+2. **Portability:** C programs can be effortlessly adapted to different platforms with minimal changes. This portability is essential for developing cross-platform applications.
+3. **Wide Application:** C finds applications in diverse domains, including operating systems, firmware development, game development, and more. Mastering C opens up a world of opportunities in various industries.
+4. **Versatility:** C offers a perfect balance between high-level and low-level programming paradigms, granting you the flexibility to work at different levels of abstraction.
+
+## Who Invented C and the Pioneers of C Programming👨‍💻
+
+Before we dive into writing code, let's pay homage to the creators of the C programming language:
+
+- **Dennis Ritchie:** Often referred to as the father of C programming, Dennis Ritchie developed C at Bell Labs in the early 1970s. His work on C significantly contributed to the development of UNIX operating systems.
+- **Brian Kernighan:** One of the key contributors to the development of C, Brian Kernighan co-authored the book "_The C Programming Language_" with Dennis Ritchie, which became a seminal work on C programming.
+
+## Setting Up Your C Programming Environment 🛠️
+
+To get started with C programming, you'll need a suitable development environment. Here are the basic steps to set up your environment:
+
+1. **Choose a Text Editor or IDE:** You can opt for a simple text editor like Vim, Emacs, or Visual Studio Code. Alternatively, consider using an Integrated Development Environment (IDE) like Code::Blocks or Dev-C++, which provides additional features to aid in programming.
+2. **Install a C Compiler:** The most common C compiler is GCC (GNU Compiler Collection). It is available for various platforms and provides excellent support for C programming. Make sure to install GCC on your system.
+3. **Write Your First C Program:** Once your environment is set up, you are ready to write your first C program.
+
+## Your First 'Hello World' Program in C 👋
+
+The **"Hello World"** program is a classic introductory program in programming languages. It simply displays the message "Hello, World!" on the screen. Let's write this program step-by-step.
+
+### Step 1: Create a New C File
+
+Open your text editor or IDE and create a new file. Save it with a ".c" extension. For example, create and open a new file called "hello_world.c". This file will be your playground for writing C code; such files are called **source code**.
+
+### Step 2: Write the Code
+
+Now, let's write the code for our "Hello World" program. In the "hello_world.c" file, type in the following code snippet:
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+### Step 3: Save and Compile
+
+Save the file and open your terminal. Navigate to the directory where you saved the "hello_world.c" file. Now, it's time to compile the program using GCC. In the terminal, run the following command:
+
+```bash
+gcc hello_world.c -o hello_world
+```
+
+The "-o" flag specifies the name of the output file. In this case, it will create an executable file named "hello_world". Without the "-o" flag, GCC saves the executable as "a.out".
+
+### Step 4: Run the Program
+
+After compiling the program successfully, you can run it by typing:
+
+```bash
+./hello_world
+```
+
+You should see the output:
+
+```plaintext
+Hello, World!
+```
+
+Congratulations! You've just written and executed your first C program! 🎉
+
+### Exercise: Write a C Program That Prints Your Name 📝
+
+To further practice your newfound C skills, let's write a program that prints your name on the screen. Go ahead and give it a try!
+
+## Essential Concepts in C Programming 📚
+
+Now, you might be wondering what "main", "printf", "#include &lt;stdio.h&gt;", and "return" mean. Let's briefly explore these concepts:
+
+1. **main() Function - Entry Point**: Every C program starts its execution from an entry point. In C, the entry point is the "main()" function. It is the first function that gets executed when you run a C program, the main indicates the starting point of execution of the program.
+2. **printf() - Standard Library Function**: In the "Hello World" program, we used "printf()" to display the message. It is a standard function that can print formatted text on the screen. More explanation of functions is written in a subsequent blog.
+3. **#include&lt;stdio.h&gt; - The Standard Libray**: C provides standard libraries that offer various functions and features. To use a function from a standard library, you need to include the corresponding header file using the "#include" directive. In this example, we included the stdio.h header file, This is the standard input/output library and the printf function is located in this header file. Without this header file, we cannot use the printf function inside our program.
+
+We'll dive deeper into the concept of **_"return"_** later in the series.
+
+## Conclusion 🏁
+
+C programming is a fascinating journey that allows you to dive into the core of programming languages. In this blog, we introduced you to the world of C programming, its history, its pioneers, and the basic concepts you need to know to write your first 'Hello World' program. As you continue your learning, you'll discover more advanced topics and applications of C programming.
+
+Remember, practice makes perfect, so keep coding and experimenting with different programs to become a proficient C programmer. Happy coding! 😊

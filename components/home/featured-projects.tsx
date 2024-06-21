@@ -48,25 +48,33 @@ const FeaturedProjects = () => {
         {featuredProjects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row md:justify-between items-center md:items-start"
+            className="flex flex-col md:flex-row md:justify-between"
           >
-            <div className="max-w-xl text-lg/8 md:text-xl/8 space-y-4">
+            <div className="md:max-w-md lg:max-w-lg xl:max-w-xl text-lg/8 space-y-4">
               <h3 className="text-secondary font-bold text-3xl">
                 {project.title}
               </h3>
               <MDXRemote source={project.description} />
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={400}
-                height={250}
-                className="rounded-lg md:hidden"
-              />
+              <Link
+                className="relative block md:hidden"
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={400}
+                  height={250}
+                  priority={true}
+                  className="rounded-lg object-cover h-[250px]"
+                />
+              </Link>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-muted/30 p-1 rounded-lg text-sm"
+                    className="bg-muted/20 font-medium p-1 rounded-lg text-sm"
                   >
                     {tech}
                   </span>
@@ -93,20 +101,26 @@ const FeaturedProjects = () => {
                 </Link>
               </div>
             </div>
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={400}
-              height={250}
-              className="rounded-lg hidden md:flex"
-            />
+            <Link
+              className="hidden md:block"
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={400}
+                height={250}
+                priority={true}
+                className="rounded-lg object-cover h-[250px]"
+              />
+            </Link>
           </div>
         ))}
         <Link
           href="/projects"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium hover:text-secondary underline flex items-center gap-2"
+          className="font-medium hover:text-secondary underline flex items-center gap-2 hover:scale-110 transition-transform duration-200 max-w-fit"
         >
           View All Projects
           <ArrowRightAlt />

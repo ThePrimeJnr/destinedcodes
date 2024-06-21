@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/static/favicons/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${fonts.publicSans.variable} ${fonts.jetBrains.variable} ${fonts.inter.variable} antialiased min-h-screen font-mono`}
+        className={`${fonts.publicSans.className} antialiased min-h-screen font-mono`}
       >
         <ProviderTheme>
           <Navbar />

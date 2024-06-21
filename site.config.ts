@@ -22,7 +22,7 @@ export const siteData: any = {
   theme: 'light',
 
   header: {
-    logo: '/static/logos/destinedcodes.png',
+    logo: '/logos/destinedcodes.png',
     title: 'DestinedCodes',
     routes: [
       { name: 'Home', value: '/', logo: HomeOutlined },
@@ -33,139 +33,39 @@ export const siteData: any = {
     ],
   },
 
-  footer: {
-    socials: [
-      {
-        name: 'Mail',
-        value: 'destinysaturday@example.com',
-        logo: MailOutlined,
-      },
-      {
-        name: 'GitHub',
-        value: 'https://github.com/destinedcodes',
-        logo: GitHub,
-      },
-      {
-        name: 'X',
-        value: 'https://twitter.com/destinedcodes',
-        logo: X,
-      },
-      {
-        name: 'LinkedIn',
-        value: 'https://www.linkedin.com/in/destinedcodes',
-        logo: LinkedIn,
-      },
-      {
-        name: 'Youtube',
-        value: 'https://youtube.com/destinedcodes',
-        logo: YouTube,
-      },
-      {
-        name: 'Resume',
-        value: 'https://youtube.com/destinedcodes',
-        logo: DescriptionOutlined,
-      },
-    ],
-  },
-
-  home: {
-    title: 'Welcome to DestinedCodes Portfolio',
-  },
-
-  blog: {
-    title: 'My Blog',
-    description:
-      'All of my thoughts, experiences, and projects, collected in chronological order.',
-  },
-
-  project: {
-    title: "Look What I've Done",
-    description: "Some personal projects I've worked on.",
-    getStatus: (status: string) => {
-      if (!status) {
-        return {};
-      }
-      switch (status) {
-        case 'active':
-          return { variant: 'default', text: 'ACTIVE' };
-        case 'dev':
-          return { variant: 'secondary', text: 'DEV' };
-        case 'filed':
-          return { variant: 'outline', text: 'FILED' };
-        case 'offline':
-          return { variant: 'destructive', text: 'OFFLINE' };
-      }
+  socials: [
+    {
+      name: 'Mail',
+      value: 'contact@destinedcodes.com',
+      logo: MailOutlined,
     },
-    projects: [
-      {
-        name: 'NextBlog',
-        description:
-          'A minimalist blog created with Next.js, Shadcn-ui, and Tailwind.css.',
-        href: 'https://next-blog.destinedcodes.com',
-        github: 'destinedcodes/next-blog',
-        status: 'active',
-      },
-      {
-        name: 'AllDone',
-        description: 'One-stop project management platform.',
-        status: 'dev',
-      },
-      {
-        name: 'Slash Editor',
-        description: 'A simple rich text editor.',
-        href: 'https://slash.destinedcodes.com',
-        github: 'destinedcodes/slash-editor',
-      },
-      {
-        name: 'RMX',
-        description:
-          'An online editor to quickly create project README.md files and GitHub profile templates.',
-        href: 'https://readme.destinedcodes.com',
-        github: 'destinedcodes/readme',
-        status: 'filed',
-      },
-      {
-        name: 'Resume Generator',
-        description:
-          'A minimalist online resume generator with potential for major upgrades.',
-        href: 'https://resume.destinedcodes.com',
-        github: 'destinedcodes/resume',
-        status: 'offline',
-      },
-    ],
-  },
-
-  comment: {
-    enabled: true,
-    engine: 'giscus',
-    giscus: {
-      repo: 'destinedcodes/destinedcodes-portfolio',
-      repoId: 'R_kgDOKTZ_kQ',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOKTZ_kc4CfMXK',
-      mapping: 'pathname',
-      reactionsEnabled: '1',
-      emitMetadata: '0',
-      inputPosition: 'top',
-      theme: 'light',
-      lang: 'en',
-      loading: 'lazy',
+    {
+      name: 'GitHub',
+      value: 'https://github.com/destinedcodes',
+      logo: GitHub,
     },
-    utterances: {
-      src: 'https://utteranc.es/client.js',
-      repo: 'destinedcodes/destinedcodes-portfolio',
-      'issue-term': 'pathname',
-      theme: 'github-light',
-      crossorigin: 'anonymous',
-      label: '',
-      async: true,
+    {
+      name: 'X',
+      value: 'https://twitter.com/destinedcodes',
+      logo: X,
     },
-  },
-
-  search: {
-    enabled: true,
-    engine: 'cmdk',
-  },
+    {
+      name: 'LinkedIn',
+      value: 'https://www.linkedin.com/in/destinedcodes',
+      logo: LinkedIn,
+    },
+    {
+      name: 'Youtube',
+      value: 'https://youtube.com/@destinedcodes',
+      logo: YouTube,
+    },
+    {
+      name: 'Resume',
+      value:
+        'https://docs.google.com/document/d/1o_wd6o3iiGk8k_mHdkVq2Tkfis3PaT24OpcNK9M2Ssk/export?usp=sharing&format=pdf',
+      logo: DescriptionOutlined,
+    },
+  ],
 };
 
 export function getMetadata(page: string) {

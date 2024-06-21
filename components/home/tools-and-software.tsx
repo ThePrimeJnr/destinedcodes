@@ -1,7 +1,7 @@
 'use client';
 
 import tools, { Tool } from '@/data/tools';
-import React, { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 interface GroupedTools {
   [key: string]: Tool[];
@@ -15,51 +15,29 @@ const ToolsAndSoftware: React.FC = () => {
     },
     {},
   );
-
   const [activeTab, setActiveTab] = useState(Object.keys(groupedTools)[0]);
-  const [underlineStyle, setUnderlineStyle] = useState({});
-  const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
-
-  useEffect(() => {
-    const activeTabIndex = Object.keys(groupedTools).indexOf(activeTab);
-    const activeTabElement = tabsRef.current[activeTabIndex];
-    if (activeTabElement) {
-      const { offsetTop, offsetLeft, offsetWidth, offsetHeight } =
-        activeTabElement;
-      setUnderlineStyle({
-        top: offsetTop + offsetHeight,
-        left: offsetLeft,
-        width: offsetWidth,
-      });
-    }
-  }, [activeTab, groupedTools]);
 
   return (
     <div id="tools-software">
       <h2 className="font-bold text-4xl md:text-5xl mb-8">
         Tools &amp; Software
       </h2>
-      <p className="text-lg md:text-xl mb-6">
+      <p className="text-lg mb-6">
         Over the years, I&apos;ve had the chance to work with a wide range of
         software, tools, and frameworks. Here are some of the ones I&apos;ve
         used:
       </p>
 
-      <div className="relative flex flex-wrap mb-4">
-        {Object.keys(groupedTools).map((type, index) => (
+      <div className="relative flex flex-wrap mb-6">
+        {Object.keys(groupedTools).map((type) => (
           <button
             key={type}
-            ref={(el: any) => (tabsRef.current[index] = el)}
-            className={`tab-button mr-4 mb-2 md:mr-6 px-2 py-1 text-md font-medium ${activeTab === type ? 'text-secondary active-tab' : 'hover:text-secondary/50'}`}
+            className={`tab-button mr-4 mb-4 md:mr-6 text-md font-medium ${activeTab === type ? 'text-secondary active-tab underline underline-offset-8 decoration-2' : 'hover:text-secondary/90'}`}
             onClick={() => setActiveTab(type)}
           >
             {type}
           </button>
         ))}
-        <div
-          className="absolute h-[2px] bg-secondary transition-all duration-300"
-          style={underlineStyle}
-        ></div>
       </div>
 
       {Object.entries(groupedTools).map(
@@ -70,7 +48,7 @@ const ToolsAndSoftware: React.FC = () => {
                 {tools.map((tool, index) => (
                   <div
                     key={index}
-                    className="group flex flex-col items-center justify-center text-center"
+                    className="flex flex-col items-center justify-center text-center"
                   >
                     <tool.icon
                       className="tool-icon mx-auto mb-3 w-8 h-8 md:w-10 md:h-10"

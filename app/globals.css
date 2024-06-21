@@ -72,26 +72,10 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-inter);
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-public-sans);
-  }
-
-  p,
-  div,
-  span {
-    font-family: var(--font-inter);
-  }
-
+  /* 
   pre,
   code {
     font-family: var(--font-jetbrains);
-  }
+  } */
 }

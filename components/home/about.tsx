@@ -18,10 +18,10 @@ const About = () => {
         </div>
       </div>
       <div className="py-8 lg:p-0 lg:pl-40">
-        <div className="text-lg/8 md:text-xl/10">
+        <div className="text-lg/8 lg:text-xl/10">
           A proficient software engineer specializing in DevOps, Full Stack, and
-          Web3 development. Open to opportunities and collaboration. Feel free
-          to reach out!
+          Web3 development. Open to new opportunities and exciting
+          collaborations. Feel free to reach out!
         </div>
         <SocialList />
       </div>

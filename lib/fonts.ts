@@ -4,15 +4,15 @@ const publicSans = Public_Sans({
   subsets: ['latin'],
   variable: '--font-public-sans',
 });
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const jetBrains = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains',
-});
+// const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// const jetBrains = JetBrains_Mono({
+//   subsets: ['latin'],
+//   variable: '--font-jetbrains',
+// });
 const fonts = {
   publicSans,
-  inter,
-  jetBrains,
+  // inter,
+  // jetBrains,
 };
 
 export default fonts;

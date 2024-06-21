@@ -1,17 +1,23 @@
+import { ArrowRightAlt } from '@mui/icons-material';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import Link from 'next/link';
 import path from 'path';
+import readingTime from 'reading-time';
+
+import Time from '../time';
 
 interface Article {
   title: string;
   description: string;
-  publishedAt: string;
+  date: string;
   image: string;
   tags: string[];
   slug: string;
   featured: boolean;
+  readingTime: string;
 }
 
 const FeaturedArticles = () => {
@@ -22,69 +28,72 @@ const FeaturedArticles = () => {
     .map((filename) => {
       const filePath = path.join(articlesDirectory, filename);
       const fileContents = fs.readFileSync(filePath, 'utf8');
-      const { data } = matter(fileContents);
+      const { data, content } = matter(fileContents);
+      const { text: readingTimeText } = readingTime(content);
 
       return {
         title: data.title,
         description: data.description,
-        publishedAt: data.publishedAt,
+        date: data.date,
         image: data.image,
         tags: data.tags,
-        slug: filename.replace('.md', ''),
+        slug: filename.replace(/^\d+-/, '').replace('.mdx', ''),
         featured: data.featured,
+        readingTime: readingTimeText,
       } as Article;
     })
     .filter((article) => article.featured);
 
   return (
     <div id="featured-articles">
-      <h2 className="font-bold text-4xl md:text-6xl mb-8 text-center md:text-left">
+      <h2 className="font-bold text-4xl md:text-6xl mb-10">
         Featured Articles
       </h2>
-      {featuredArticles.map((article, index) => (
-        <div
-          key={index}
-          className="flex flex-row justify-between items-center mb-6"
-        >
-          <div className="flex-shrink-0 w-1/3">
+      <div className="space-y-10">
+        {featuredArticles.map((article, index) => (
+          <Link
+            href={`/blog/${article.slug}`}
+            key={index}
+            className="flex flex-col md:flex-row gap-8 transform transition duration-300 relative group"
+          >
+            <div className="absolute inset-0 -m-4 md:-m-6 -z-10 rounded-xl transition duration-300 opacity-0 group-hover:opacity-30 bg-gray-300 dark:bg-gray-700"></div>
             <Image
               src={article.image}
               alt={article.title}
-              width={400}
-              height={200}
-              layout="responsive"
-              objectFit="cover"
-              className="rounded-lg"
+              width={350}
+              height={220}
+              priority={true}
+              className="rounded-lg object-cover h-[220px]"
             />
-          </div>
-          <div className="flex-grow pl-4">
-            <h3 className="font-bold text-xl md:text-2xl mb-2">
-              {article.title}
-            </h3>
-            <p className="text-sm text-gray-500 mb-2">
-              {new Date(article.publishedAt).toLocaleDateString()} - 5 min read
-            </p>
-            <p className="text-base md:text-lg mb-4">{article.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {article.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="text-xs font-semibold inline-block py-1 px-2 rounded text-secondary bg-secondary-light"
-                >
-                  #{tag}
-                </span>
-              ))}
+            <div className="text-lg/8">
+              <h3 className="font-bold text-3xl mb-4 transition duration-300 group-hover:underline">
+                {article.title}
+              </h3>
+              <MDXRemote source={article.description} />
+              <p className="text-sm tracking-wider text-gray-500 my-2">
+                <Time date={article.date} /> • {article.readingTime}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {article.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="bg-secondary/15 font-medium p-1 rounded-lg text-sm text-secondary"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <Link
-              href={`/articles/${article.slug}`}
-              passHref
-              className="text-primary hover:underline focus:underline"
-            >
-              Read Article
-            </Link>
-          </div>
-        </div>
-      ))}
+          </Link>
+        ))}
+        <Link
+          href="/projects"
+          className="font-medium hover:text-secondary underline flex items-center gap-2 hover:scale-110 transition-transform duration-200 max-w-fit"
+        >
+          Read More Articles
+          <ArrowRightAlt />
+        </Link>
+      </div>
     </div>
   );
 };

@@ -20,11 +20,6 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ['var(--font-inter)'],
-        heading: ['var(--font-public-sans)'],
-        mono: ['var(--font-jetbrains)'],
-      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

@@ -2,11 +2,16 @@ import SocialList from '../social-list';
 
 const Footer = () => {
   return (
-    <footer className="flex md:flex-row flex-col justify-between items-center p-4 md:p-6 container">
-      <span className="mb-2 md:mb-0 text-center md:text-left">
-        © 2024 DestinedCodes. All rights reserved
-      </span>
-      <SocialList />
+    <footer className="p-4 md:p-6 container">
+      <h3 className="text-center md:text-left font-bold text-2xl mb-2">
+        Destiny Saturday
+      </h3>
+      <div className="flex md:flex-row flex-col justify-between items-center">
+        <span className="mb-2 md:mb-0 text-center md:text-left">
+          © 2024 DestinedCodes. All rights reserved
+        </span>
+        <SocialList showNames={false} />
+      </div>
     </footer>
   );
 };
