@@ -12,6 +12,8 @@ import {
   YouTube,
 } from '@mui/icons-material';
 
+const root = `https://destinedcodes.com`;
+
 export const siteData: any = {
   author: 'Destiny Saturday',
   title: 'Destiny Saturday (DestinedCodes)',
@@ -73,6 +75,39 @@ export function getMetadata(page: string) {
     home: {
       title: `${siteData.title} - Home`,
       description: siteData.description,
+      openGraph: {
+        type: 'website',
+        locale: 'en',
+        url: `${root}`,
+        siteName: 'destinedcodes.com',
+        title: `${siteData.title} - Home`,
+        description: siteData.description,
+        images: [
+          {
+            url: `${root}`,
+            width: 1200,
+            height: 630,
+            type: 'image/png',
+            image: `${root}/images/og-image.png`,
+          },
+        ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        site: '@destinedcodes',
+        creator: '@destinedcodes',
+        title: `${siteData.title} - Home`,
+        description: siteData.description,
+        images: [
+          {
+            url: `${root}`,
+            width: 1200,
+            height: 630,
+            type: 'image/png',
+            image: `${root}/images/og-image.png`,
+          },
+        ],
+      },
     },
     blog: {
       title: `${siteData.title} - Blog`,

@@ -52,6 +52,7 @@ const FeaturedArticles = () => {
       <div className="space-y-10">
         {featuredArticles.map((article, index) => (
           <Link
+            passHref
             href={`/blog/${article.slug}`}
             key={index}
             className="flex flex-col md:flex-row gap-8 transform transition duration-300 relative group"
@@ -62,7 +63,6 @@ const FeaturedArticles = () => {
               alt={article.title}
               width={350}
               height={220}
-              
               className="rounded-lg object-cover h-[220px]"
             />
             <div className="text-lg/8">

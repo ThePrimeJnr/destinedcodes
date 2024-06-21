@@ -35,7 +35,6 @@ const Hero = () => {
             alt="GitEarn Logo"
             width={32}
             height={32}
-            priority={true}
             className="rounded-full"
           />
           Creator, GitEarn
