@@ -4,7 +4,6 @@ export default function getMetadata(page: string) {
   const defaultMetadata = {
     title: siteData.title,
     description: siteData.description,
-    author: [siteData.author],
     creator: [siteData.author],
     publisher: [siteData.author],
     metadataBase: new URL(siteData.url),
@@ -13,15 +12,14 @@ export default function getMetadata(page: string) {
       description: siteData.description,
       url: siteData.url,
       siteName: 'Destiny Saturday (DestinedCodes)',
-      locale: 'en',
+      locale: 'en_US',
       type: 'website',
       images: [
         {
           url: siteData.ogImageUrl,
+          alt: 'Destiny Saturday (DestinedCodes)',
           width: 1200,
           height: 630,
-          alt: 'Destiny Saturday (DestinedCodes)',
-          image: siteData.ogImageUrl,
         },
       ],
     },
@@ -40,17 +38,30 @@ export default function getMetadata(page: string) {
       ...defaultMetadata,
       openGraph: {
         ...defaultMetadata.openGraph,
+        url: `${siteData.url}/blog`,
         type: 'article',
       },
     },
     projects: {
       ...defaultMetadata,
+      openGraph: {
+        ...defaultMetadata.openGraph,
+        url: `${siteData.url}/projects`,
+      },
     },
-    video: {
+    videos: {
       ...defaultMetadata,
+      openGraph: {
+        ...defaultMetadata.openGraph,
+        url: `${siteData.url}/videos`,
+      },
     },
     contact: {
       ...defaultMetadata,
+      openGraph: {
+        ...defaultMetadata.openGraph,
+        url: `${siteData.url}/contact`,
+      },
     },
   };
 
