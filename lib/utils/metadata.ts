@@ -19,7 +19,7 @@ export default function getMetadata(page: string) {
         type: 'website',
         images: [
           {
-            url: `${siteData.url}/images/og-image.png`,
+            image: '/images/og-image.png',
             width: 1200,
             height: 630,
             alt: 'Destiny Saturday (DestinedCodes) - OG Image',
@@ -32,29 +32,10 @@ export default function getMetadata(page: string) {
         creator: '@destinedcodes',
       },
     },
-    blog: {
-      title: `${siteData.title} - Blog`,
-      description:
-        'All of my thoughts, experiences, and projects, collected in chronological order.',
-    },
-    projects: {
-      title: `${siteData.title} - Projects`,
-      description: "Some personal projects I've worked on.",
-    },
-    video: {
-      title: `${siteData.title} - Videos`,
-      description:
-        'Watch videos of my talks, tutorials, and project showcases.',
-    },
-    contact: {
-      title: `${siteData.title} - Contact`,
-      description: 'Get in touch with me via email or social media.',
-    },
-    about: {
-      title: `${siteData.title} - About Me`,
-      description:
-        'Learn more about Destiny Saturday, also known as DestinedCodes.',
-    },
+    blog: {},
+    projects: {},
+    video: {},
+    contact: {},
   };
 
   const defaultMetadata: any = {
@@ -74,7 +55,7 @@ export default function getMetadata(page: string) {
       type: 'website',
       images: [
         {
-          url: `${siteData.url}/images/og-image.png`,
+          image: '/images/og-image.png',
           width: 1200,
           height: 630,
           alt: 'Destiny Saturday (DestinedCodes) - OG Image',
