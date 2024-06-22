@@ -15,13 +15,13 @@ export default function getMetadata(page: string) {
       siteName: 'Destiny Saturday (DestinedCodes)',
       locale: 'en_US',
       type: 'website',
-      image: siteData.ogImageUrl,
       images: [
         {
           url: siteData.ogImageUrl,
           alt: 'Destiny Saturday (DestinedCodes)',
           width: 1200,
           height: 630,
+          image: siteData.ogImageUrl,
         },
       ],
     },
