@@ -7,6 +7,7 @@ export default function getMetadata(page: string) {
     creator: [siteData.author],
     publisher: [siteData.author],
     metadataBase: new URL(siteData.url),
+    image: siteData.ogImageUrl,
     openGraph: {
       title: siteData.title,
       description: siteData.description,
