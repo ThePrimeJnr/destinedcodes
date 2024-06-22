@@ -17,6 +17,7 @@ import {
   SiCplusplus,
   SiCss3,
   SiDart,
+  SiDatadog,
   SiDjango,
   SiDocker,
   SiExpress,
@@ -42,6 +43,7 @@ import {
   SiMdx,
   SiMongodb,
   SiMysql,
+  SiNeovim,
   SiNestjs,
   SiNextdotjs,
   SiNginx,
@@ -354,6 +356,11 @@ const tools: Tool[] = [
     icon: SiPrecommit,
     type: 'Cloud/DevOps',
   },
+  {
+    name: 'Datadog',
+    icon: SiDatadog,
+    type: 'Cloud/DevOps',
+  },
 
   // Tools
   {
@@ -387,8 +394,8 @@ const tools: Tool[] = [
     type: 'Tools',
   },
   {
-    name: 'Visual Studio',
-    icon: SiVisualstudiocode,
+    name: 'Neovim',
+    icon: SiNeovim,
     type: 'Tools',
   },
   {

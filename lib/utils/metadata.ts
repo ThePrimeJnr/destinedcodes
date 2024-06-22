@@ -17,10 +17,11 @@ export default function getMetadata(page: string) {
       type: 'website',
       images: [
         {
-          url: `${siteData.url}/images/og-image.png`,
+          url: siteData.ogImageUrl,
           width: 1200,
           height: 630,
-          alt: 'Destiny Saturday (DestinedCodes) - OG Image',
+          alt: 'Destiny Saturday (DestinedCodes)',
+          image: siteData.ogImageUrl,
         },
       ],
     },

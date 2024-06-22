@@ -5,7 +5,8 @@ const siteData: any = {
   description:
     'A proficient software engineer specializing in DevOps, Full Stack, and Web3 development. Passionate about cloud engineering, automation and artificial intelligence.',
   language: 'en',
-  url: 'https://www.destinedcodes.com',
+  url: 'https://destinedcodes.com',
+  ogImageUrl: 'https://destinedcodes.com/images/og-image.png',
 };
 
 export default siteData;
