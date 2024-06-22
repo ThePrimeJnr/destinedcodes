@@ -7,6 +7,7 @@ const siteData: any = {
   language: 'en',
   url: 'https://destinedcodes.com',
   ogImageUrl: 'https://destinedcodes.com/images/og-image.png',
+  logo: 'https://destinedcodes.com/logos/destinedcodes.png',
 };
 
 export default siteData;
