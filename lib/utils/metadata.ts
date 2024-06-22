@@ -10,9 +10,8 @@ export default function getMetadata(page: string) {
     openGraph: {
       title: siteData.title,
       description: siteData.description,
-      url: `${siteData.url}/`,
+      url: siteData.url,
       siteName: 'Destiny Saturday (DestinedCodes)',
-      logo: siteData.logo,
       image: siteData.ogImageUrl,
       locale: 'en_US',
       type: 'website',
