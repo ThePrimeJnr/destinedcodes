@@ -7,11 +7,10 @@ export default function getMetadata(page: string) {
     creator: [siteData.author],
     publisher: [siteData.author],
     metadataBase: new URL(siteData.url),
-    image: siteData.ogImageUrl,
     openGraph: {
       title: siteData.title,
       description: siteData.description,
-      url: siteData.ogImageUrl,
+      url: `${siteData.url}/`,
       siteName: 'Destiny Saturday (DestinedCodes)',
       locale: 'en_US',
       type: 'website',
