@@ -11,7 +11,7 @@ export default function getMetadata(page: string) {
     openGraph: {
       title: siteData.title,
       description: siteData.description,
-      url: siteData.url,
+      url: siteData.ogImageUrl,
       siteName: 'Destiny Saturday (DestinedCodes)',
       locale: 'en_US',
       type: 'website',
@@ -21,7 +21,6 @@ export default function getMetadata(page: string) {
           alt: 'Destiny Saturday (DestinedCodes)',
           width: 1200,
           height: 630,
-          image: siteData.ogImageUrl,
         },
       ],
     },
