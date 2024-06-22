@@ -15,6 +15,7 @@ export default function getMetadata(page: string) {
       siteName: 'Destiny Saturday (DestinedCodes)',
       locale: 'en_US',
       type: 'website',
+      image: siteData.ogImageUrl,
       images: [
         {
           url: siteData.ogImageUrl,

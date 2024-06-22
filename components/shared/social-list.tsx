@@ -27,6 +27,7 @@ const SocialList: React.FC<SocialListProps> = ({ showNames = true }) => {
           rel="noopener noreferrer"
           key={social.name}
           className="hover:scale-110 transition-transform duration-200 hover:text-secondary flex items-center"
+          aria-label={social.name}
         >
           <social.logo />
           {showNames && <span className="underline ml-2">{social.name}</span>}

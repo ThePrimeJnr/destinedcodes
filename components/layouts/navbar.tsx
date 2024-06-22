@@ -28,6 +28,7 @@ const Navbar = () => {
       onClick={() => {
         setTheme(theme == 'light' ? 'dark' : 'light');
       }}
+      aria-label="Toggle theme"
     >
       <LightModeOutlined className="w-6 h-6 transition-all rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
       <DarkModeOutlined className="absolute w-6 h-6 transition-all rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
@@ -45,6 +46,7 @@ const Navbar = () => {
               setOpen(false);
               router.push(route.value);
             }}
+            aria-label={`Navigate to ${route.name}`}
           >
             <route.logo
               className="mr-2"
@@ -68,7 +70,7 @@ const Navbar = () => {
           }}
         >
           <SheetTrigger asChild>
-            <Button size={'icon'} variant={'ghost'}>
+            <Button size={'icon'} variant={'ghost'} aria-label="Open menu">
               <Menu fontSize="large" />
             </Button>
           </SheetTrigger>
