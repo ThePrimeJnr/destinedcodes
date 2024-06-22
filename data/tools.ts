@@ -2,6 +2,7 @@ import {
   IconType,
   SiAmazonaws,
   SiAmazons3,
+  SiAndroidstudio,
   SiApache,
   SiAsana,
   SiAzuredevops,
@@ -37,6 +38,7 @@ import {
   SiKubernetes,
   SiLinux,
   SiLua,
+  SiMake,
   SiMdx,
   SiMongodb,
   SiMysql,
@@ -46,11 +48,15 @@ import {
   SiNgrok,
   SiNodedotjs,
   SiPostgresql,
+  SiPostman,
   SiPrecommit,
   SiPrisma,
   SiPython,
+  SiPythonanywhere,
+  SiRailway,
   SiReact,
   SiRedis,
+  SiRender,
   SiSentry,
   SiSocketdotio,
   SiSqlalchemy,
@@ -279,6 +285,21 @@ const tools: Tool[] = [
     type: 'Cloud/DevOps',
   },
   {
+    name: 'Render',
+    icon: SiRender,
+    type: 'Cloud/DevOps',
+  },
+  {
+    name: 'SiRailway',
+    icon: SiRailway,
+    type: 'Cloud/DevOps',
+  },
+  {
+    name: 'Pyhton Anywhere',
+    icon: SiPythonanywhere,
+    type: 'Cloud/DevOps',
+  },
+  {
     name: 'Google Cloud',
     icon: SiGooglecloud,
     type: 'Cloud/DevOps',
@@ -366,6 +387,21 @@ const tools: Tool[] = [
     type: 'Tools',
   },
   {
+    name: 'Visual Studio',
+    icon: SiVisualstudiocode,
+    type: 'Tools',
+  },
+  {
+    name: 'Android Studio',
+    icon: SiAndroidstudio,
+    type: 'Tools',
+  },
+  {
+    name: 'Postman',
+    icon: SiPostman,
+    type: 'Tools',
+  },
+  {
     name: 'Vim',
     icon: SiVim,
     type: 'Tools',
@@ -393,6 +429,11 @@ const tools: Tool[] = [
   {
     name: 'Jupyter Notebook',
     icon: SiJupyter,
+    type: 'Tools',
+  },
+  {
+    name: 'Make',
+    icon: SiMake,
     type: 'Tools',
   },
 ];
