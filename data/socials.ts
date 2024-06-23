@@ -42,7 +42,7 @@ const socials: Social[] = [
   {
     name: 'Resume',
     value:
-      'https://docs.google.com/document/d/1o_wd6o3iiGk8k_mHdkVq2Tkfis3PaT24OpcNK9M2Ssk/export?usp=sharing&format=pdf',
+      '/resume',
     logo: DescriptionOutlined,
   },
 ];
