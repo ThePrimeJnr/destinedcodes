@@ -41,8 +41,8 @@ const FeaturedProjects = () => {
 
   return (
     <div id="featured-projects">
-      <h2 className="font-bold text-4xl md:text-6xl mb-10">
-        Featured Projects
+      <h2 className="font-bold text-4xl md:text-5xl mb-8">
+      Featured Projects
       </h2>
       <div className="space-y-10">
         {featuredProjects.map((project, index) => (

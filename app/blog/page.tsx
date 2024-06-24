@@ -2,13 +2,16 @@ import type { Metadata } from 'next';
 
 import getMetadata from '@/lib/utils/metadata';
 
+import Filter from '@/components/blog/filter';
+
 export const metadata: Metadata = getMetadata('blog');
-const NotFound = () => {
+
+const Blog = () => {
   return (
-    <h1 className="flex items-center text-9xl font-bold justify-center min-h-[calc(100vh-200px)]">
-      501
-    </h1>
+    <div className="space-y-20 md:space-y-36 py-20">
+      <Filter />
+    </div>
   );
 };
 
-export default NotFound;
+export default Blog;
